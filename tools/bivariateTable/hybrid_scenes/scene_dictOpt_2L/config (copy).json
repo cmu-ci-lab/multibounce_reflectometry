@@ -1,0 +1,158 @@
+{
+    "version": {"major":1, "minor":0},
+    "name": "test-bowl",
+    "description": "Tests non lambertian surface reconstruction",
+
+    "estimator": {
+        "optimizer": {
+            "type": "grouped-adam",
+            "params": 0.01,
+            "beta1": 0.7,
+            "beta2": 0.9
+        },
+        "iterations": 6,
+        "samples": {
+            "type": "variable",
+            "stops": [40, 50, 120, 150],
+            "samples": [16, 64, 256, 512]
+        },
+        "depth": -1,
+        "albedo": false,
+        "hyper-parameters": "weights/initialization.npy",
+        "normalize-gradients": false
+    },
+
+    "hyper-parameter-list": "parameters.json",
+    "weight-estimation": {
+        "enabled": true,
+        "samples": 8,
+        "depth": -1,
+        "mesh": "meshes/photometric.ply",
+        "scene": "scenes/dictionary-scene.xml",
+        "dfile": "dictionary.npy"
+    },
+    "mask": {
+        "type":"original",
+        "orthoHeight": 5,
+        "orthoWidth": 5
+    },
+    "bsdf-estimator": {
+        "optimizer": {
+            "type": "eg-adam",
+            "params": 0.1,
+            "beta1": 0.5,
+            "beta2": 0.99995,
+            "sets": "main-only"
+        },
+        "iterations": 8,
+        "samples": {
+            "type": "variable",
+            "stops": [40],
+            "samples": [1]
+        },
+        "depth": -1,
+        "hyper-parameters": "weights/initialization.npy",
+        "pre-project": false,
+        "weight-reprojection": true,
+        "update-list": true,
+        "bsdf-first": true,
+        "extended-phase": 4
+    },
+
+    "zero-padding": "zero-padding.json",
+
+    "bsdf-preprocess": {
+        "enabled": true,
+        "file": "bsdf-dictionary.json"
+    },
+
+    "lights": {
+        "file": "lights/refinement-lights.lt"
+    },
+
+    "initialization": {
+        "file": "meshes/photometric.ply"
+    },
+
+    "remesher": {
+        "enabled": true,
+        "iterations": 90,
+        "keep-normals": false,
+        "integrator": "poisson"
+    },
+
+    "scenes": {
+        "intensity": "scenes/intensity-scene.xml",
+        "gradient": "scenes/gradient-scene.xml",
+        "normals": "scenes/normals-scene.xml",
+        "colors": "scenes/colors-scene.xml"
+    },
+
+    "output-link": {
+        "intensity": "/tmp/mtsout-0.hds",
+        "gradient": "/tmp/mtsgradout-0.shds"
+    },
+
+    "logging": {
+        "intensity": {
+            "stdout":"out-0.log",
+            "stderr":"err-0.log"
+        },
+        "gradient": {
+            "stdout":"out-1.log",
+            "stderr":"err-1.log"
+        }
+    },
+
+    "multiresolution": {
+        "enabled":true,
+        "type":"static-list",
+        "schedule": [20,50,1000],
+        "values": [1,1,1]
+    },
+
+    "distribution": {
+        "enabled": true,
+        "type": "multi",
+        "servers": [
+            "ec2-3-16-51-166.us-east-2.compute.amazonaws.com:7554",
+            "ec2-3-16-51-166.us-east-2.compute.amazonaws.com:7555",
+            "ec2-3-16-51-166.us-east-2.compute.amazonaws.com:7556",
+            "ec2-3-16-51-166.us-east-2.compute.amazonaws.com:7557",
+            "ec2-3-16-51-166.us-east-2.compute.amazonaws.com:7558",
+            "ec2-3-16-51-166.us-east-2.compute.amazonaws.com:7559",
+            "ec2-3-16-51-166.us-east-2.compute.amazonaws.com:7560",
+            "ec2-3-16-51-166.us-east-2.compute.amazonaws.com:7561",
+            "ec2-3-16-51-166.us-east-2.compute.amazonaws.com:7562",
+            "ec2-3-16-51-166.us-east-2.compute.amazonaws.com:7563",
+            "ec2-3-16-51-166.us-east-2.compute.amazonaws.com:7564",
+            "ec2-3-16-51-166.us-east-2.compute.amazonaws.com:7565"
+           ],
+        "intensity-count": 4,
+        "gradient-count": 8,
+        "local-cpus": 0
+    },
+
+    "target": {
+        "type": "ext-render",
+        "samples": 16,
+        "mesh": "meshes/target.ply",
+        "depth": -1,
+        "scene": "scenes/originals-scene.xml",
+        "width": 256,
+        "height": 256
+    },
+
+    "original": {
+        "lights": "lights/original-lights.lt"
+    },
+
+    "initial-reconstruction": {
+        "type": "render",
+        "lights": "lights/refinement-lights-8.lt",
+        "mesh": "meshes/original.ply",
+        "scene": "scenes/initial-scene.xml"
+    },
+
+    "hyper-order": ["bsdf", "normals", "mesh"]
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.6.0">
+	<integrator type="bdptdiff">
+		<integer name="maxDepth" value="$depth"/>
+        	<boolean name="lightImage" value="false"/>
+	</integrator>
+
+	<sensor type="orthographic">
+		<transform name="toWorld">
+			<scale x="1" y="1"/>
+			<lookAt origin="0, 0, 6" target="0, 0, 0" up="0, 1, 0"/>
+		</transform>
+
+		<sampler type="ldsampler">
+			<integer name="sampleCount" value="$sampleCount"/>
+		</sampler>
+
+		<film type="hdrreductorfilm">
+	         	<string name="reductorFile" value="/tmp/reductor-grad.hds"/>
+			<integer name="width" value="$width"/>
+			<integer name="height" value="$height"/>
+			<boolean name="banner" value="false"/>
+			<string name="pixelFormat" value="luminance"/>
+            		<string name="fileFormat" value="shds"/>
+            		<string name="componentFormat" value="float32"/>
+			<rfilter type="gaussian"/>
+		</film>
+	</sensor>
+
+	<emitter type="directional">
+		<vector name="direction" x="$lightX" y="$lightY" z="$lightZ"/>
+		<spectrum name="irradiance" value="$irradiance"/>
+	</emitter>
+
+    <bsdf type="roughconductor" id="spec_ggx">
+				<float name="alpha" value="0.1"/>
+				<string name="distribution" value="ggx"/>
+			    	<boolean name="differentiable" value="true"/>
+			</bsdf>
+ 
+ 	<shape type="ply">
+		<boolean name="differentiable" value="true"/>
+		<string name="filename" value="/home/kfirs/scene_tabularOpt/meshes/target.ply"/>
+		<transform name="toWorld">
+			<scale value="1"/>
+			<translate x="0" y="0" z="0"/>
+		</transform>
+		<ref id="spec_ggx"/>
+		<boolean name="faceNormals" value="false"/>
+	</shape>
+
+</scene>

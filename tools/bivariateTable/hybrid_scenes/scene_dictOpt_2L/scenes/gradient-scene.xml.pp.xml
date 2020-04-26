@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.6.0">
+	<integrator type="bdptdiff">
+		<integer name="maxDepth" value="$depth"/>
+        	<boolean name="lightImage" value="true"/>
+	</integrator>
+
+	<sensor type="orthographic">
+		<!--<transform name="toWorld">
+			<lookAt origin="-160, 225, 159" target="-160, 225, 559" up="0, 1, 0"/>
+		</transform>
+-->
+		<transform name="toWorld">
+			<scale x="1" y="1"/>
+			<lookAt origin="0, 0, 6" target="0, 0, 0" up="0, 1, 0"/>
+		</transform>
+		<sampler type="ldsampler">
+			<integer name="sampleCount" value="$sampleCount"/> 
+		</sampler>
+
+		<film type="hdrreductorfilm">
+	         	<string name="reductorFile" value="/tmp/reductor-$meshSlot.hds"/>
+			<integer name="width" value="$width"/>
+			<integer name="height" value="$height"/>
+			<boolean name="banner" value="false"/>
+			<string name="pixelFormat" value="luminance"/>
+            		<string name="fileFormat" value="shds"/>
+            		<string name="componentFormat" value="float32"/>
+			<rfilter type="gaussian"/>
+		</film>
+	</sensor>
+    <!-- <sensor type="orthographic">
+		<transform name="toWorld">
+			<scale x="75" y="300"/>
+			<lookAt origin="1378, 373, +275" target="-160, 225, 559" up="0, 1, 0"/>
+		</transform>
+		<sampler type="ldsampler">
+			<integer name="sampleCount" value="$sampleCount"/> 
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="256"/>
+			<integer name="height" value="256"/>
+			<boolean name="banner" value="false"/>
+			<string name="pixelFormat" value="luminance"/>
+            <string name="fileFormat" value="hds"/>
+            <string name="componentFormat" value="float32"/>
+			<rfilter type="gaussian"/>
+		</film>
+	</sensor>-->
+	
+	<!--<bsdf type="diffwrapper" id="white-rough">
+		<bsdf type="mixturebsdf">
+		
+			<string name="weights" value="$weight1, $weight2, $weight3"/>
+       
+			<bsdf type="roughconductor">
+				<float name="alpha" value="$alpha1"/>
+				<string name="distribution" value="ggx"/>
+			    	<boolean name="differentiable" value="true"/>
+			</bsdf>
+
+			<bsdf type="roughconductor">
+				<float name="alpha" value="$alpha2"/>
+				<string name="distribution" value="ggx"/>
+			    	<boolean name="differentiable" value="true"/>
+			</bsdf>
+			
+			<bsdf type="diffuse">
+				<spectrum name="reflectance" value="1"/>
+				<boolean name="differentiable" value="true"/>
+			</bsdf>
+
+			<boolean name="differentiable" value="true"/>
+		</bsdf>
+		<boolean name="differentiable" value="true"/>
+	</bsdf>-->
+	<bsdf type="diffwrapper" id="white-rough">
+<bsdf type="mixturesampledbsdf">
+<string name="weights" value="$weight0000,$weight0001,$weight0002,$weight0003,$weight0004,$weight0005,$weight0006,$weight0007,$weight0008,$weight0009,$weight0010,$weight0011,$weight0012,$weight0013,$weight0014,$weight0015,$weight0016,$weight0017,$weight0018,$weight0019,$weight0020,$weight0021,$weight0022,$weight0023,$weight0024,$weight0025,$weight0026,$weight0027,$weight0028,$weight0029,$weight0030,$weight0031,$weight0032,$weight0033,$weight0034,$weight0035,$weight0036,$weight0037,$weight0038,$weight0039,$weight0040,$weight0041"/>
+<string name="samples" value="$sampleWeight0000,$sampleWeight0001,$sampleWeight0002,$sampleWeight0003,$sampleWeight0004,$sampleWeight0005,$sampleWeight0006,$sampleWeight0007,$sampleWeight0008,$sampleWeight0009,$sampleWeight0010,$sampleWeight0011,$sampleWeight0012,$sampleWeight0013,$sampleWeight0014,$sampleWeight0015,$sampleWeight0016,$sampleWeight0017,$sampleWeight0018,$sampleWeight0019,$sampleWeight0020,$sampleWeight0021,$sampleWeight0022,$sampleWeight0023,$sampleWeight0024,$sampleWeight0025,$sampleWeight0026,$sampleWeight0027,$sampleWeight0028,$sampleWeight0029,$sampleWeight0030,$sampleWeight0031,$sampleWeight0032,$sampleWeight0033,$sampleWeight0034,$sampleWeight0035,$sampleWeight0036,$sampleWeight0037,$sampleWeight0038,$sampleWeight0039,$sampleWeight0040,$sampleWeight0041"/>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.01"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10.0"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.5"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.7"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.5"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.55"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.41"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.3"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.25"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.1"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.46"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.4"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.21"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.42"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.3"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.04"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10.0"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.38"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.5"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.28"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.15"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.16"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10.0"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.11"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.22"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.1"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.39"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10.0"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.26"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.3"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.23"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.1"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.11"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.3"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.02"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.15"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.45"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.5"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.43"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.55"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.07"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.5"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.27"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.15"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.5"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10.0"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.22"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10.0"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.15"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.05"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.34"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10.0"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.13"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.45"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.09"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.15"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.3"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.45"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.2"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10.0"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.5"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.6"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.03"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.65"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.01"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10.0"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.44"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.65"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.28"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10.0"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.2"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.2"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.17"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="10.0"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.33"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.65"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="roughconductor">
+	<float name="alpha" value="0.25"/>
+	<string name="distribution" value="ggx"/>
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="eta" value="1.4"/>
+	<spectrum name="k" value="0"/>
+</bsdf>
+
+<bsdf type="diffuse">
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="reflectance" value="1"/>
+</bsdf>
+
+<bsdf type="diffuse">
+	<boolean name="differentiable" value="true"/>
+	<spectrum name="reflectance" value="1e-07"/>
+</bsdf>
+</bsdf>
+<boolean name="differentiable" value="true"/>
+</bsdf>
+
+
+	<bsdf type="diffuse" id="light">
+		<spectrum name="reflectance" value="400:0.78, 500:0.78, 600:0.78, 700:0.78"/>
+	</bsdf>
+
+<!--<emitter type="point">
+        <point name="position" x="-160" y="155" z="259"/>
+        <spectrum name="intensity" value="400:13000, 500:13000, 600:15000, 700:15000"/>
+    </emitter>-->
+
+	<emitter type="directional">
+		<vector name="direction" x="$lightX" y="$lightY" z="$lightZ"/>
+		<spectrum name="irradiance" value="$irradiance"/>
+	</emitter>
+
+  <!--shape type="cylinder">
+  <float name="radius" value="1"/>
+    		<transform name="toWorld">
+          <rotate x="1" angle="90"/>
+          <translate x="-1" y="0.5" z="0"/>
+          <scale y="2"/>
+  		</transform>
+     		<ref id="white-rough"/>
+  </shape-->
+
+	<shape type="ply">
+		<string name="filename" value="/tmp/mts_mesh_gradient_slot_0.ply"/>
+		<!--string name="filename" value="/home/kfirs/target.ply"/-->
+		<transform name="toWorld">
+			<scale value="1"/>
+			<translate x="0" y="0" z="0"/>
+		</transform>
+		<ref id="white-rough"/>
+		<boolean name="faceNormals" value="false"/>
+	</shape>
+
+
+</scene>

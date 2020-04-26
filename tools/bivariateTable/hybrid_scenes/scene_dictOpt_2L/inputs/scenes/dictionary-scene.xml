@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.6.0">
+	<integrator type="bdpt">
+		<integer name="maxDepth" value="$depth"/>
+        	<boolean name="lightImage" value="false"/>
+	</integrator>
+
+	<sensor type="orthographic">
+		<!--<transform name="toWorld">
+			<lookAt origin="-160, 225, 159" target="-160, 225, 559" up="0, 1, 0"/>
+		</transform>
+-->
+		<transform name="toWorld">
+			<scale x="1" y="1"/>
+			<lookAt origin="0, 0, 10" target="0, 0, 0" up="0, 1, 0"/>
+		</transform>
+		<sampler type="ldsampler">
+			<integer name="sampleCount" value="$sampleCount"/> 
+		</sampler>
+
+		<film type="hdrfilm">
+			<integer name="width" value="256"/>
+			<integer name="height" value="256"/>
+			<boolean name="banner" value="false"/>
+			<string name="pixelFormat" value="luminance"/>
+            		<string name="fileFormat" value="hds"/>
+            		<string name="componentFormat" value="float32"/>
+			<rfilter type="gaussian"/>
+		</film>
+	</sensor>
+
+    <!-- <sensor type="orthographic">
+		<transform name="toWorld">
+			<scale x="75" y="300"/>
+			<lookAt origin="1378, 373, +275" target="-160, 225, 559" up="0, 1, 0"/>
+		</transform>
+		<sampler type="ldsampler">
+			<integer name="sampleCount" value="$sampleCount"/> 
+		</sampler>
+		<film type="hdrfilm">
+			<integer name="width" value="256"/>
+			<integer name="height" value="256"/>
+			<boolean name="banner" value="false"/>
+			<string name="pixelFormat" value="luminance"/>
+            <string name="fileFormat" value="hds"/>
+            <string name="componentFormat" value="float32"/>
+			<rfilter type="gaussian"/>
+		</film>
+	</sensor>-->
+
+	
+	<bsdf type="diffwrapper" id="white-rough">
+		<bsdf type="mixturebsdf">
+			<string name="weights" value="$weight1, $weight2"/>
+			<bsdf type="roughconductor">
+				<float name="alpha" value="$alpha"/>
+				<spectrum name="k" value="0"/>
+				<spectrum name="eta" value="$eta"/>
+				<string name="distribution" value="ggx"/>
+			    	<boolean name="differentiable" value="true"/>
+			</bsdf>
+			<bsdf type="diffuse">
+				<spectrum name="reflectance" value="1"/>
+			    	<boolean name="differentiable" value="true"/>
+			</bsdf>
+			<boolean name="differentiable" value="true"/>
+		</bsdf>
+		<boolean name="differentiable" value="true"/>
+	</bsdf>
+
+	<bsdf type="diffuse" id="light">
+		<spectrum name="reflectance" value="400:0.78, 500:0.78, 600:0.78, 700:0.78"/>
+	</bsdf>
+
+	<!--<shape type="obj">
+		<string name="filename" value="meshes/cbox_luminaire.obj"/>
+		<transform name="toWorld">
+			<translate x="0" y="-0.5" z="0"/>
+		</transform>
+
+		<ref id="light"/>
+
+		<emitter type="area">
+			<spectrum name="radiance" value="400:0, 500:8, 600:15.6, 700:18.4"/>
+		</emitter>
+	</shape>-->
+	
+	<!--<emitter type="spot"> 
+		<spectrum name="intensity" value="400:0, 500:8, 600:15.6, 700:18.4"/>
+		<transform name="toWorld">
+			<lookAt origin="278, 273.01, -799" target="278, 273.01, -800"/>
+		</transform>
+		<float name="cutoffAngle" value="180"/>
+	</emitter>-->
+	<!--<emitter type="probe">
+		<spectrum name="intensity" value="400:0, 500:3000000, 600:5000000, 700:5000000"/>
+		
+		<transform  name="toWorld">
+		<lookAt origin="289, 273, -800" target="289, 273, -799" up="0,1,0"/>
+		</transform>
+		
+		<float name="xfov" value="90"/>
+		<float name="yfov" value="90"/>
+		<float name="xres" value="512"/>
+		<float name="yres" value="512"/>
+	</emitter>-->
+	
+	<emitter type="directional">
+		<vector name="direction" x="$lightX" y="$lightY" z="$lightZ"/>
+		<spectrum name="irradiance" value="25, 0, 0"/>
+	</emitter>
+	<!--<emitter type="point">
+        <point name="position" x="-160" y="155" z="259"/>
+        <spectrum name="intensity" value="400:13000, 500:13000, 600:15000, 700:15000"/>
+    </emitter>-->
+	<!--<emitter type="collimated">
+		<transform  name="toWorld">
+		
+			<lookAt origin="1378, 373, +275" target="-160, 225, 559" up="0, 1, 0"/>
+		</transform>
+
+		<spectrum name="power" value="400:500000, 500:500000, 600:500000, 700:500000"/>
+	</emitter>-->
+
+	<!--<shape type="obj">
+		<string name="filename" value="meshes/cbox_floor.obj"/>
+
+		<ref id="white"/>
+	</shape>-->
+
+	<!--<shape type="obj">
+		<string name="filename" value="meshes/nlos_back.obj"/>
+
+		<ref id="white-rough"/>
+	</shape>-->
+
+	<!--<shape type="obj">
+		<string name="filename" value="meshes/cbox_back_2.obj"/>
+		<transform name="toWorld">
+			<scale x="0.6" y="0.6"/>
+			<translate x="-385" y="0" z="-200"/>
+		</transform>
+		<ref id="white-rough"/>
+	</shape>-->
+
+	<!--<shape type="sphere">
+		<transform name="toWorld">
+			<scale value="100"/>
+			<translate x="-160" y="225" z="359"/>
+		</transform>
+		<ref id="white-rough"/>
+	</shape>-->
+	
+	<shape type="ply">
+		<string name="filename" value="$mesh"/>
+		<transform name="toWorld">
+			<scale value="1"/>
+			<translate x="0" y="0" z="0"/>
+		</transform>
+		<ref id="white-rough"/>
+	</shape>
+
+
+	<!-- Bowl -->
+	<!--<shape type="obj">
+		<string name="filename" value="meshes/bowl.obj"/>
+		<transform name="toWorld">
+			<rotate x="1" angle="90"/>
+			<scale value="100"/>
+			<translate x="-160" y="225" z="359"/>
+		</transform>
+		<ref id="white-rough"/>
+	</shape>-->
+
+
+</scene>

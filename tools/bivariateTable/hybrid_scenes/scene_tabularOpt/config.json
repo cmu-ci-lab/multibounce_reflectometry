@@ -1,0 +1,210 @@
+{
+    "version": {"major":1, "minor":0},
+    "name": "test-tetrahedron",
+    "description": "Tests non lambertian surface reconstruction",
+
+    "mask": {
+        "type": "file",
+        "file": "mask.npy"
+    },
+
+    "estimator": {
+        "optimizer": {
+            "type": "grouped-adam",
+            "params-generator": {
+                "type": "factor",
+                "factor": 0.93,
+                "initial-value": 0.0
+            },
+            "beta1": 0.001,
+            "beta2": 0.001,
+	    "decay": 20
+        },
+        "iterations": 0,
+	"regularization": {
+		"enabled": true,
+		"type": "smoothness",
+		"lambda": 0.2,
+		"radius": 1.0
+	},
+        "samples": {
+            "type": "variable",
+            "stops": [10,20,40,80,120,180,300,400],
+            "samples": [32,32,64,64,128,256,1024],
+	    "bsdf-adaptive": true,
+	    "bsdf-adaptive-mode": "bsdfWeight"
+        },
+        "depth": -1,
+        "albedo": false,
+        "hyper-parameters": "weights/initialization.npy",
+        "normalize-gradients": false,
+	"placeholder-gradients": true,
+	"enforce-integrability": true
+    },
+
+    "base-port": 7654,
+    "weight-samples-parameter-list": "sample-parameters.json",
+    "hyper-parameter-list": "parameters.json",
+    "weight-estimation": {
+        "enabled": true,
+        "samples": 2048,
+        "depth": -1,
+        "mesh": "meshes/photometric.ply",
+        "scene": "scenes/dictionary-scene.xml",
+        "dfile": "dictionary.npy"
+    },
+    "bsdf-estimator": {
+        "optimizer": {
+            "type": "eg-adam",
+            "params-generator": {
+                "type": "factor",
+                "factor": 0.98,
+                "initial-value": 0.0
+            },
+            "beta1": 0.5,
+            "beta2": 0.99,
+            "sets": "main-only"
+        },
+        "iterations": 1000,
+        "samples": {
+            "type": "variable",
+            "stops": [200,500,1000,4000,1000,4000,4000],
+            "samples": [2048,2048,256,512,1024,2048,2048,2048],
+	    "bsdf-adaptive": true,
+	    "bsdf-adaptive-mode": "bsdfWeight",
+	    "spatial-adaptive": true,
+	    "spatial-adaptive-mode" : "direct"
+        },
+	"tabular-bsdf": {
+		"optimizer": {
+        	    "type": "adam",
+            		"params-generator": {
+                		"type": "factor",
+                		"factor": 0.93,
+                		"initial-value": 0.2
+            		},
+            		"beta1": 0.7,
+            		"beta2": 0.7,
+	    		"decay": 0
+        	},
+	    "initialization": "tabular-bsdf/initialization.npy"
+	},
+        "depth": 3,
+        "hyper-parameters": "weights/initialization.npy",
+        "pre-project": false,
+        "weight-reprojection": true,
+        "update-list": true,
+        "bsdf-first": true,
+        "extended-phase": 0
+    },
+
+    "zero-padding": "zero-padding.json",
+
+    "bsdf-preprocess": {
+        "enabled": true,
+        "file": "bsdf-dictionary.json"
+    },
+
+    "lights": {
+        "file": "lights/light-directions-rl.lt",
+        "intensity-file": "lights/light-intensities-rl.lt",
+        "recalibrate": true
+    },
+
+    "initialization": {
+        "file": "meshes/photometric.ply"
+    },
+
+    "remesher": {
+        "enabled": true,
+        "iterations": 40,
+        "keep-normals": false,
+        "integrator": "poisson"
+    },
+
+    "scenes": {
+        "intensity": "scenes/intensity-scene.xml",
+        "gradient": "scenes/gradient-scene.xml",
+        "normals": "scenes/normals-scene.xml",
+        "colors": "scenes/colors-scene.xml"
+    },
+
+    "output-link": {
+        "intensity": "/tmp/mtsout-0.hds",
+        "gradient": "/tmp/mtsgradout-0.shds"
+    },
+
+    "logging": {
+        "intensity": {
+            "stdout":"out-0.log",
+            "stderr":"err-0.log"
+        },
+        "gradient": {
+            "stdout":"out-1.log",
+            "stderr":"err-1.log"
+        }
+    },
+
+    "multiresolution": {
+        "enabled":true,
+        "type":"static-list",
+        "schedule": [100,300,400],
+        "values": [1,1,1]
+    },
+    "distribution": {
+        "enabled": true,
+        "type": "multi",
+        "core": "multi",
+        "servers": [
+		 "127.0.0.1:7554",
+		 "127.0.0.1:7555"
+           ],
+        "local-cpus": 0
+    },
+
+    "target": {
+        "type": "npy",
+        "file": "target.npy",
+        "width": 256,
+        "height": 256,
+        "normals-file": "target-normals.npy",
+        "mesh": "meshes/target.ply",
+        "thresholding": 0,
+        "reweighting": false
+    },
+    
+    "target": {
+        "type": "npy",
+        "file": "target.npy",
+        "width": 256,
+        "height": 256,
+        "normals-file": "target-normals.npy",
+        "mesh": "meshes/target.ply",
+      	"scene": "scenes/intensity-scene.xml.pp.xml",
+        "thresholding": 0,
+        "reweighting": false,
+	      "depth": -1,
+	      "samples":64000,
+	      "hyper-parameters": "weights/target.npy",
+	      "tabular-bsdf": "tabular-bsdf/target.npy"
+    },
+    
+    "original": {
+        "lights": "lights/original-lights.lt"
+    },
+
+    "initial-reconstruction": {
+        "type": "file",
+        "file": "target.npy",
+        "lights": "lights/light-directions-rl.lt",
+        "light-intensities": "lights/light-intensities-rl.lt"
+    },
+
+    "bsdf-compare": {
+        "source": "scenes/comparison/source-scene.xml",
+        "target": "scenes/comparison/source-scene.xml",
+        "target-embed": true,
+        "target-weights": "weights/target.npy"
+    },
+    "hyper-order": ["bsdf", "normals", "mesh"]
+}

@@ -1,0 +1,448 @@
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:235] depth=4
+
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:236] Got a param depth
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:235] sampleCount=64
+
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:236] Got a param sampleCount
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:235] lightX=0.0
+
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:236] Got a param lightX
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:235] lightY=0.0
+
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:236] Got a param lightY
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:235] lightZ=0.0
+
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:236] Got a param lightZ
+2018-08-11 22:05:34 INFO  main [mtstensorflow.cpp:350] Mitsuba version 0.6.0 (Linux, 64 bit), Copyright (c) 2017 Wenzel Jakob
+2018-08-11 22:05:34 INFO  main [SocketStream] Connecting to "ec2-18-207-183-170.compute-1.amazonaws.com:7554"
+2018-08-11 22:05:34 INFO  main [mtstensorflow.cpp:487] Enter mtssrv -h for more options
+2018-08-11 22:05:34 INFO  main [mtstensorflow.cpp:512] sassy-pc: Listening on port 7554.. Send Ctrl-C or SIGTERM to stop.
+2018-08-11 22:05:34 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:05:34 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:05:35 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:05:35 INFO  main [mtstensorflow.cpp:556] depth:-1.000000
+2018-08-11 22:05:35 INFO  main [mtstensorflow.cpp:556] sampleCount:1024.000000
+2018-08-11 22:05:35 INFO  main [mtstensorflow.cpp:556] lightX:0.000000
+2018-08-11 22:05:35 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:05:35 INFO  main [mtstensorflow.cpp:556] lightZ:-1.000000
+2018-08-11 22:05:35 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:05:35 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:05:35 INFO  main [PluginManager] Loading plugin "plugins/bdpt.so" ..
+2018-08-11 22:05:35 INFO  main [PluginManager] Loading plugin "plugins/ldsampler.so" ..
+2018-08-11 22:05:35 INFO  main [PluginManager] Loading plugin "plugins/gaussian.so" ..
+2018-08-11 22:05:35 INFO  main [PluginManager] Loading plugin "plugins/hdrfilm.so" ..
+2018-08-11 22:05:37 INFO  main [PluginManager] Loading plugin "plugins/orthographic.so" ..
+2018-08-11 22:05:37 INFO  main [PluginManager] Loading plugin "plugins/diffuse.so" ..
+2018-08-11 22:05:37 INFO  main [PluginManager] Loading plugin "plugins/diffwrapper.so" ..
+2018-08-11 22:05:37 INFO  main [PluginManager] Loading plugin "plugins/directional.so" ..
+2018-08-11 22:05:37 INFO  main [PluginManager] Loading plugin "plugins/ply.so" ..
+2018-08-11 22:05:37 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:05:49 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11659 ms).
+2018-08-11 22:05:49 INFO  ren0 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:06:02 INFO  ren0 [KDTreeBase] Finished -- took 12759 ms.
+2018-08-11 22:06:02 INFO  ren0 [BDPTIntegrator] Starting render job (256x256, 1024 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (3.6m, ETA: 3.7h)  Rendering: [+                                           ] (3.6m, ETA: 1.9h)  Rendering: [++                                          ] (3.7m, ETA: 1.3h)  Rendering: [+++++++++++                                 ] (3.8m, ETA: 10.4m)  Rendering: [++++++++++++++++++                          ] (3.8m, ETA: 5.2m)  Rendering: [++++++++++++++++++++++++++                  ] (3.8m, ETA: 2.5m)  Rendering: [+++++++++++++++++++++++++++++++             ] (3.8m, ETA: 1.5m)  Rendering: [+++++++++++++++++++++++++++++++++++++++     ] (3.9m, ETA: 24.0s)  Rendering: [++++++++++++++++++++++++++++++++++++++++++  ] (3.9m, ETA: 7.5s)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (3.9m, ETA: 0.0s)  
+2018-08-11 22:09:56 INFO  ren0 [RenderJob] Render time: 4.1195m
+2018-08-11 22:09:56 INFO  ren0 [HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:09:56 INFO  ren0 [Bitmap] writeHDRStream(): Done
+2018-08-11 22:09:56 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:09:56 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:09:56 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:09:56 INFO  main [mtstensorflow.cpp:556] depth:-1.000000
+2018-08-11 22:09:56 INFO  main [mtstensorflow.cpp:556] sampleCount:1024.000000
+2018-08-11 22:09:56 INFO  main [mtstensorflow.cpp:556] lightX:-0.514000
+2018-08-11 22:09:56 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:09:56 INFO  main [mtstensorflow.cpp:556] lightZ:-0.857000
+2018-08-11 22:09:56 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:09:56 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:09:57 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:10:08 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11285 ms).
+2018-08-11 22:10:08 INFO  ren1 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:10:21 INFO  ren1 [KDTreeBase] Finished -- took 12182 ms.
+2018-08-11 22:10:21 INFO  ren1 [BDPTIntegrator] Starting render job (256x256, 1024 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (3.5m, ETA: 3.7h)  Rendering: [+                                           ] (3.9m, ETA: 2.0h)  Rendering: [++                                          ] (4.0m, ETA: 1.4h)  Rendering: [++++++++++++                                ] (4.0m, ETA: 10.3m)  Rendering: [+++++++++++++++++++                         ] (4.1m, ETA: 5.2m)  Rendering: [++++++++++++++++++++++++++                  ] (4.1m, ETA: 2.6m)  Rendering: [+++++++++++++++++++++++++++++++++++         ] (4.1m, ETA: 1.0m)  Rendering: [++++++++++++++++++++++++++++++++++++++++    ] (4.1m, ETA: 21.0s)  Rendering: [++++++++++++++++++++++++++++++++++++++++++  ] (4.2m, ETA: 8.0s)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (4.2m, ETA: 0.0s)  
+2018-08-11 22:14:31 INFO  ren1 [RenderJob] Render time: 4.3779m
+2018-08-11 22:14:31 INFO  ren1 [HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:14:31 INFO  ren1 [Bitmap] writeHDRStream(): Done
+2018-08-11 22:14:31 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:14:31 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:14:31 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:14:31 INFO  main [mtstensorflow.cpp:556] depth:-1.000000
+2018-08-11 22:14:31 INFO  main [mtstensorflow.cpp:556] sampleCount:1024.000000
+2018-08-11 22:14:31 INFO  main [mtstensorflow.cpp:556] lightX:0.390000
+2018-08-11 22:14:31 INFO  main [mtstensorflow.cpp:556] lightY:0.650000
+2018-08-11 22:14:31 INFO  main [mtstensorflow.cpp:556] lightZ:-0.650000
+2018-08-11 22:14:31 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:14:31 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:14:32 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:14:43 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 10945 ms).
+2018-08-11 22:14:43 INFO  ren2 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:14:54 INFO  ren2 [KDTreeBase] Finished -- took 11347 ms.
+2018-08-11 22:14:54 INFO  ren2 [BDPTIntegrator] Starting render job (256x256, 1024 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (2.9m, ETA: 3.1h)  Rendering: [+                                           ] (3.6m, ETA: 1.9h)  Rendering: [++                                          ] (3.7m, ETA: 1.2h)  Rendering: [+++++++++++                                 ] (3.7m, ETA: 11.1m)  Rendering: [+++++++++++++++++++                         ] (3.7m, ETA: 4.8m)  Rendering: [++++++++++++++++++++++++                    ] (3.7m, ETA: 3.1m)  Rendering: [++++++++++++++++++++++++++                  ] (3.8m, ETA: 2.4m)  Rendering: [++++++++++++++++++++++++++++++              ] (3.8m, ETA: 1.7m)  Rendering: [++++++++++++++++++++++++++++++++++++++      ] (3.8m, ETA: 32.5s)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (3.8m, ETA: 0.0s)  
+2018-08-11 22:18:43 INFO  ren2 [RenderJob] Render time: 4.0130m
+2018-08-11 22:18:43 INFO  ren2 [HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:18:43 INFO  ren2 [Bitmap] writeHDRStream(): Done
+2018-08-11 22:18:43 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:18:43 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:18:44 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:18:44 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:18:44 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:18:44 INFO  main [mtstensorflow.cpp:556] lightX:-0.514000
+2018-08-11 22:18:44 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:18:44 INFO  main [mtstensorflow.cpp:556] lightZ:-0.857000
+2018-08-11 22:18:44 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:18:44 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:18:44 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:18:55 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11016 ms).
+2018-08-11 22:18:56 INFO  ren3 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:19:08 INFO  ren3 [KDTreeBase] Finished -- took 11940 ms.
+2018-08-11 22:19:08 INFO  ren3 [BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (1.9s, ETA: 2.0m)  Rendering: [+                                           ] (3.9s, ETA: 2.0m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (4.5s, ETA: 0.0s)  
+2018-08-11 22:19:12 INFO  ren3 [RenderJob] Render time: 16.8620s
+2018-08-11 22:19:12 INFO  ren3 [HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:19:12 INFO  ren3 [Bitmap] writeHDRStream(): Done
+2018-08-11 22:19:12 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:19:12 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:19:13 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:19:13 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:19:13 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:19:13 INFO  main [mtstensorflow.cpp:556] lightX:0.390000
+2018-08-11 22:19:13 INFO  main [mtstensorflow.cpp:556] lightY:0.650000
+2018-08-11 22:19:13 INFO  main [mtstensorflow.cpp:556] lightZ:-0.650000
+2018-08-11 22:19:13 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:19:13 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:19:13 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:19:24 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11498 ms).
+2018-08-11 22:19:25 INFO  ren4 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:19:37 INFO  ren4 [KDTreeBase] Finished -- took 12175 ms.
+2018-08-11 22:19:37 INFO  ren4 [BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (1.3s, ETA: 1.4m)  Rendering: [+                                           ] (2.7s, ETA: 1.4m)  Rendering: [++                                          ] (4.4s, ETA: 1.1m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (4.8s, ETA: 0.0s)  
+2018-08-11 22:19:42 INFO  ren4 [RenderJob] Render time: 17.4390s
+2018-08-11 22:19:42 INFO  ren4 [HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:19:42 INFO  ren4 [Bitmap] writeHDRStream(): Done
+2018-08-11 22:19:42 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:19:42 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:19:42 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:19:42 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:19:42 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:19:42 INFO  main [mtstensorflow.cpp:556] lightX:0.000000
+2018-08-11 22:19:42 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:19:42 INFO  main [mtstensorflow.cpp:556] lightZ:-1.000000
+2018-08-11 22:19:42 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:19:42 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:19:43 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:19:55 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11746 ms).
+2018-08-11 22:19:55 INFO  ren5 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:20:07 INFO  ren5 [KDTreeBase] Finished -- took 11974 ms.
+2018-08-11 22:20:07 INFO  ren5 [BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (1.9s, ETA: 2.0m)  Rendering: [++                                          ] (3.2s, ETA: 1.1m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (3.3s, ETA: 0.0s)  
+2018-08-11 22:20:10 INFO  ren5 [RenderJob] Render time: 15.6610s
+2018-08-11 22:20:10 INFO  ren5 [HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:20:10 INFO  ren5 [Bitmap] writeHDRStream(): Done
+2018-08-11 22:20:10 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:21:54 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:21:55 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:21:55 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:21:55 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:21:55 INFO  main [mtstensorflow.cpp:556] lightX:0.000000
+2018-08-11 22:21:55 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:21:55 INFO  main [mtstensorflow.cpp:556] lightZ:-1.000000
+2018-08-11 22:21:55 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:21:55 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:21:55 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:22:07 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11475 ms).
+2018-08-11 22:22:07 INFO  ren6 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:22:19 INFO  ren6 [KDTreeBase] Finished -- took 11496 ms.
+2018-08-11 22:22:19 INFO  ren6 [BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (2.5s, ETA: 2.6m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (3.0s, ETA: 0.0s)  
+2018-08-11 22:22:22 INFO  ren6 [RenderJob] Render time: 14.9670s
+2018-08-11 22:22:22 INFO  ren6 [HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:22:22 INFO  ren6 [Bitmap] writeHDRStream(): Done
+2018-08-11 22:22:22 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:22:22 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:22:22 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:22:22 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:22:22 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:22:22 INFO  main [mtstensorflow.cpp:556] lightX:0.390000
+2018-08-11 22:22:22 INFO  main [mtstensorflow.cpp:556] lightY:0.650000
+2018-08-11 22:22:22 INFO  main [mtstensorflow.cpp:556] lightZ:-0.650000
+2018-08-11 22:22:22 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:22:22 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:22:23 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:22:34 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11494 ms).
+2018-08-11 22:22:34 INFO  ren7 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:22:46 INFO  ren7 [KDTreeBase] Finished -- took 11877 ms.
+2018-08-11 22:22:46 INFO  ren7 [BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (1.5s, ETA: 1.5m)  Rendering: [++                                          ] (2.8s, ETA: 57.9s)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (2.9s, ETA: 0.0s)  
+2018-08-11 22:22:49 INFO  ren7 [RenderJob] Render time: 15.2250s
+2018-08-11 22:22:49 INFO  ren7 [HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:22:49 INFO  ren7 [Bitmap] writeHDRStream(): Done
+2018-08-11 22:22:49 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:22:49 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:22:50 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:22:50 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:22:50 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:22:50 INFO  main [mtstensorflow.cpp:556] lightX:-0.514000
+2018-08-11 22:22:50 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:22:50 INFO  main [mtstensorflow.cpp:556] lightZ:-0.857000
+2018-08-11 22:22:50 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:22:50 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:22:50 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:23:02 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11511 ms).
+2018-08-11 22:23:02 INFO  ren8 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:23:13 INFO  ren8 [KDTreeBase] Finished -- took 11483 ms.
+2018-08-11 22:23:14 INFO  ren8 [BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (2.6s, ETA: 2.7m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (3.2s, ETA: 0.0s)  
+2018-08-11 22:23:17 INFO  ren8 [RenderJob] Render time: 15.0700s
+2018-08-11 22:23:17 INFO  ren8 [HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:23:17 INFO  ren8 [Bitmap] writeHDRStream(): Done
+2018-08-11 22:23:17 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:23:17 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:23:17 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:23:17 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:23:17 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:23:17 INFO  main [mtstensorflow.cpp:556] lightX:0.390000
+2018-08-11 22:23:17 INFO  main [mtstensorflow.cpp:556] lightY:0.650000
+2018-08-11 22:23:17 INFO  main [mtstensorflow.cpp:556] lightZ:-0.650000
+2018-08-11 22:23:17 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:23:17 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:23:18 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:23:29 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11468 ms).
+2018-08-11 22:23:29 INFO  ren9 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:23:41 INFO  ren9 [KDTreeBase] Finished -- took 11945 ms.
+2018-08-11 22:23:41 INFO  ren9 [BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (2.4s, ETA: 2.6m)  Rendering: [++                                          ] (4.4s, ETA: 1.5m)  Rendering: [++                                          ] (5.7s, ETA: 1.4m)  Rendering: [++++                                        ] (7.5s, ETA: 1.2m)  Rendering: [+++++                                       ] (9.5s, ETA: 1.1m)  Rendering: [++++++                                      ] (10.6s, ETA: 57.3s)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (10.7s, ETA: 0.0s)  
+2018-08-11 22:23:52 INFO  ren9 [RenderJob] Render time: 23.0460s
+2018-08-11 22:23:52 INFO  ren9 [HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:23:52 INFO  ren9 [Bitmap] writeHDRStream(): Done
+2018-08-11 22:23:52 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:23:52 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:23:53 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:23:53 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:23:53 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:23:53 INFO  main [mtstensorflow.cpp:556] lightX:-0.514000
+2018-08-11 22:23:53 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:23:53 INFO  main [mtstensorflow.cpp:556] lightZ:-0.857000
+2018-08-11 22:23:53 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:23:53 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:23:53 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:24:04 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11484 ms).
+2018-08-11 22:24:05 INFO  ren10[KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:24:16 INFO  ren10[KDTreeBase] Finished -- took 10831 ms.
+2018-08-11 22:24:16 INFO  ren10[BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (0.5s, ETA: 0.0s)  
+2018-08-11 22:24:16 INFO  ren10[RenderJob] Render time: 11.7850s
+2018-08-11 22:24:16 INFO  ren10[HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:24:16 INFO  ren10[Bitmap] writeHDRStream(): Done
+2018-08-11 22:24:16 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:24:16 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:24:17 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:24:17 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:24:17 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:24:17 INFO  main [mtstensorflow.cpp:556] lightX:0.000000
+2018-08-11 22:24:17 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:24:17 INFO  main [mtstensorflow.cpp:556] lightZ:-1.000000
+2018-08-11 22:24:17 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:24:17 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:24:17 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:24:28 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11335 ms).
+2018-08-11 22:24:29 INFO  ren11[KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:24:41 INFO  ren11[KDTreeBase] Finished -- took 12492 ms.
+2018-08-11 22:24:41 INFO  ren11[BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (1.8s, ETA: 1.9m)  Rendering: [++                                          ] (3.0s, ETA: 1.0m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (3.1s, ETA: 0.0s)  
+2018-08-11 22:24:44 INFO  ren11[RenderJob] Render time: 15.9640s
+2018-08-11 22:24:44 INFO  ren11[HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:24:44 INFO  ren11[Bitmap] writeHDRStream(): Done
+2018-08-11 22:24:44 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:24:44 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:24:45 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:24:45 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:24:45 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:24:45 INFO  main [mtstensorflow.cpp:556] lightX:0.000000
+2018-08-11 22:24:45 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:24:45 INFO  main [mtstensorflow.cpp:556] lightZ:-1.000000
+2018-08-11 22:24:45 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:24:45 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:24:45 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:24:57 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11740 ms).
+2018-08-11 22:24:57 INFO  ren12[KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:25:09 INFO  ren12[KDTreeBase] Finished -- took 12060 ms.
+2018-08-11 22:25:10 INFO  ren12[BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (1.6s, ETA: 1.7m)  Rendering: [+                                           ] (3.5s, ETA: 1.8m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (4.4s, ETA: 0.0s)  
+2018-08-11 22:25:14 INFO  ren12[RenderJob] Render time: 16.8970s
+2018-08-11 22:25:14 INFO  ren12[HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:25:14 INFO  ren12[Bitmap] writeHDRStream(): Done
+2018-08-11 22:25:14 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:25:14 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:25:14 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:25:14 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:25:14 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:25:14 INFO  main [mtstensorflow.cpp:556] lightX:-0.514000
+2018-08-11 22:25:14 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:25:14 INFO  main [mtstensorflow.cpp:556] lightZ:-0.857000
+2018-08-11 22:25:14 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:25:14 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:25:15 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:25:26 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11563 ms).
+2018-08-11 22:25:27 INFO  ren13[KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:25:39 INFO  ren13[KDTreeBase] Finished -- took 12400 ms.
+2018-08-11 22:25:39 INFO  ren13[BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (2.4s, ETA: 2.5m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (3.3s, ETA: 0.0s)  
+2018-08-11 22:25:42 INFO  ren13[RenderJob] Render time: 16.1120s
+2018-08-11 22:25:42 INFO  ren13[HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:25:42 INFO  ren13[Bitmap] writeHDRStream(): Done
+2018-08-11 22:25:42 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:25:42 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:25:43 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:25:43 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:25:43 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:25:43 INFO  main [mtstensorflow.cpp:556] lightX:0.390000
+2018-08-11 22:25:43 INFO  main [mtstensorflow.cpp:556] lightY:0.650000
+2018-08-11 22:25:43 INFO  main [mtstensorflow.cpp:556] lightZ:-0.650000
+2018-08-11 22:25:43 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:25:43 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:25:43 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:25:55 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11815 ms).
+2018-08-11 22:25:55 INFO  ren14[KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:26:07 INFO  ren14[KDTreeBase] Finished -- took 11624 ms.
+2018-08-11 22:26:07 INFO  ren14[BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (0.5s, ETA: 0.0s)  
+2018-08-11 22:26:08 INFO  ren14[RenderJob] Render time: 12.5730s
+2018-08-11 22:26:08 INFO  ren14[HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:26:08 INFO  ren14[Bitmap] writeHDRStream(): Done
+2018-08-11 22:26:08 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:26:08 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:26:08 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:26:08 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:26:08 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:26:08 INFO  main [mtstensorflow.cpp:556] lightX:0.390000
+2018-08-11 22:26:08 INFO  main [mtstensorflow.cpp:556] lightY:0.650000
+2018-08-11 22:26:08 INFO  main [mtstensorflow.cpp:556] lightZ:-0.650000
+2018-08-11 22:26:08 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:26:08 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:26:09 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:26:20 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11572 ms).
+2018-08-11 22:26:20 INFO  ren15[KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:26:32 INFO  ren15[KDTreeBase] Finished -- took 11737 ms.
+2018-08-11 22:26:32 INFO  ren15[BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (2.5s, ETA: 2.6m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (3.0s, ETA: 0.0s)  
+2018-08-11 22:26:35 INFO  ren15[RenderJob] Render time: 15.1620s
+2018-08-11 22:26:35 INFO  ren15[HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:26:35 INFO  ren15[Bitmap] writeHDRStream(): Done
+2018-08-11 22:26:35 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:26:35 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:26:36 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:26:36 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:26:36 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:26:36 INFO  main [mtstensorflow.cpp:556] lightX:-0.514000
+2018-08-11 22:26:36 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:26:36 INFO  main [mtstensorflow.cpp:556] lightZ:-0.857000
+2018-08-11 22:26:36 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:26:36 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:26:36 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:26:48 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11591 ms).
+2018-08-11 22:26:48 INFO  ren16[KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:27:00 INFO  ren16[KDTreeBase] Finished -- took 12344 ms.
+2018-08-11 22:27:01 INFO  ren16[BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (1.3s, ETA: 1.4m)  Rendering: [+                                           ] (2.6s, ETA: 1.4m)  Rendering: [++                                          ] (3.9s, ETA: 1.3m)  Rendering: [++                                          ] (6.3s, ETA: 1.6m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (7.0s, ETA: 0.0s)  
+2018-08-11 22:27:08 INFO  ren16[RenderJob] Render time: 19.7790s
+2018-08-11 22:27:08 INFO  ren16[HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:27:08 INFO  ren16[Bitmap] writeHDRStream(): Done
+2018-08-11 22:27:08 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:27:08 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:27:08 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:27:08 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:27:08 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:27:08 INFO  main [mtstensorflow.cpp:556] lightX:0.000000
+2018-08-11 22:27:08 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:27:08 INFO  main [mtstensorflow.cpp:556] lightZ:-1.000000
+2018-08-11 22:27:08 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:27:08 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:27:08 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:27:20 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11530 ms).
+2018-08-11 22:27:20 INFO  ren17[KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:27:32 INFO  ren17[KDTreeBase] Finished -- took 11814 ms.
+2018-08-11 22:27:32 INFO  ren17[BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (2.3s, ETA: 2.4m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (3.1s, ETA: 0.0s)  
+2018-08-11 22:27:35 INFO  ren17[RenderJob] Render time: 15.3300s
+2018-08-11 22:27:35 INFO  ren17[HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:27:35 INFO  ren17[Bitmap] writeHDRStream(): Done
+2018-08-11 22:27:35 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:29:15 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:29:16 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:29:16 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:29:16 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:29:16 INFO  main [mtstensorflow.cpp:556] lightX:0.000000
+2018-08-11 22:29:16 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:29:16 INFO  main [mtstensorflow.cpp:556] lightZ:-1.000000
+2018-08-11 22:29:16 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:29:16 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:29:16 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:29:28 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11513 ms).
+2018-08-11 22:29:28 INFO  ren18[KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:29:40 INFO  ren18[KDTreeBase] Finished -- took 12004 ms.
+2018-08-11 22:29:40 INFO  ren18[BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (1.3s, ETA: 1.4m)  Rendering: [+                                           ] (3.6s, ETA: 1.9m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (4.4s, ETA: 0.0s)  
+2018-08-11 22:29:44 INFO  ren18[RenderJob] Render time: 16.8340s
+2018-08-11 22:29:44 INFO  ren18[HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:29:44 INFO  ren18[Bitmap] writeHDRStream(): Done
+2018-08-11 22:29:44 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:29:44 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:29:45 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:29:45 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:29:45 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:29:45 INFO  main [mtstensorflow.cpp:556] lightX:0.390000
+2018-08-11 22:29:45 INFO  main [mtstensorflow.cpp:556] lightY:0.650000
+2018-08-11 22:29:45 INFO  main [mtstensorflow.cpp:556] lightZ:-0.650000
+2018-08-11 22:29:45 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:29:45 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:29:45 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:29:57 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11417 ms).
+2018-08-11 22:29:57 INFO  ren19[KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:30:08 INFO  ren19[KDTreeBase] Finished -- took 10717 ms.
+2018-08-11 22:30:08 INFO  ren19[BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (0.5s, ETA: 0.0s)  
+2018-08-11 22:30:08 INFO  ren19[RenderJob] Render time: 11.6800s
+2018-08-11 22:30:08 INFO  ren19[HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:30:08 INFO  ren19[Bitmap] writeHDRStream(): Done
+2018-08-11 22:30:08 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:30:08 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:30:09 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:30:09 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:30:09 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:30:09 INFO  main [mtstensorflow.cpp:556] lightX:-0.514000
+2018-08-11 22:30:09 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:30:09 INFO  main [mtstensorflow.cpp:556] lightZ:-0.857000
+2018-08-11 22:30:09 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:30:09 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red.xml" ..
+2018-08-11 22:30:09 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_1.ply" ..
+2018-08-11 22:30:21 INFO  main [PLYLoader] "mts_mesh_copy_1": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11444 ms).
+2018-08-11 22:30:21 INFO  ren20[KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:30:32 INFO  main [mtstensorflow.cpp:90] Caught signal - shutting down..
+2018-08-11 22:30:33 INFO  ren20[KDTreeBase] Finished -- took 12116 ms.
+2018-08-11 22:30:33 INFO  ren20[BDPTIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+Rendering: [                                            ] (1.4s, ETA: 1.5m)  Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (1.9s, ETA: 0.0s)  
+2018-08-11 22:30:35 INFO  ren20[RenderJob] Render time: 14.4300s
+2018-08-11 22:30:35 INFO  ren20[HDRFilm] Writing image to "/tmp/mtsout-0.hds" ..
+2018-08-11 22:30:35 INFO  ren20[Bitmap] writeHDRStream(): Done
+2018-08-11 22:30:35 INFO  main [statistics.cpp:142] Statistics:
+------------------------------------------------------------
+ * Loaded plugins :
+    -  plugins/bdpt.so [Bidirectional path tracer]
+    -  plugins/diffuse.so [Smooth diffuse BRDF]
+    -  plugins/diffwrapper.so [Normal map modifier]
+    -  plugins/directional.so [Directional emitter]
+    -  plugins/gaussian.so [Gaussian reconstruction filter]
+    -  plugins/hdrfilm.so [High dynamic range film]
+    -  plugins/ldsampler.so [Low discrepancy sampler]
+    -  plugins/orthographic.so [Orthographics camera]
+    -  plugins/ply.so [PLY mesh loader]
+
+  * General :
+    -  Normal rays traced : 38.180 M
+
+  * Network :
+    -  Bytes received : 33.569 M
+    -  Bytes sent : 67.920 M
+------------------------------------------------------------

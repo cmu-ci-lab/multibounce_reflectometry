@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.6.0">
+	<integrator type="bdpt">
+		<integer name="maxDepth" value="$depth"/>
+        	<boolean name="lightImage" value="false"/>
+	</integrator>
+
+	<sensor type="orthographic">
+
+		<transform name="toWorld">
+			<scale x="4" y="4"/>
+			<lookAt origin="0, 0, 30" target="0, 0, 0" up="0, 1, 0"/>
+		</transform>
+		<sampler type="ldsampler">
+			<integer name="sampleCount" value="$sampleCount"/> 
+		</sampler>
+
+		<film type="hdrfilm">
+			<integer name="width" value="256"/>
+			<integer name="height" value="256"/>
+			<boolean name="banner" value="false"/>
+			<string name="pixelFormat" value="luminance"/>
+            		<string name="fileFormat" value="$ext"/>
+            		<string name="componentFormat" value="float32"/>
+			<rfilter type="gaussian"/>
+		</film>
+	</sensor>
+
+	<!--<bsdf type="dj_merl" id="main-bsdf"> 
+        	<string name="filename" value="merl/dark-blue-paint.binary"/> 
+        </bsdf>-->
+	<bsdf type="diffuse" id="main-bsdf"> 
+        	<!--<string name="filename" value="merl/dark-blue-paint.binary"/>-->
+		<spectrum name="reflectance" value="0.5"/>
+        </bsdf>
+
+	<emitter type="directional">
+		<vector name="direction" x="$lightX" y="$lightY" z="$lightZ"/>
+		<spectrum name="irradiance" value="5"/>
+	</emitter>
+
+	<shape type="ply">
+		<string name="filename" value="$mesh"/>
+		<transform name="toWorld">
+			<scale value="1"/>
+			<translate x="0" y="0" z="0"/>
+		</transform>
+		<ref id="main-bsdf"/>
+	</shape>
+
+</scene>

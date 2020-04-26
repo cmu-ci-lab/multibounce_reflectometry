@@ -1,0 +1,1019 @@
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:235] depth=4
+
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:236] Got a param depth
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:235] sampleCount=64
+
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:236] Got a param sampleCount
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:235] lightX=0.0
+
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:236] Got a param lightX
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:235] lightY=0.0
+
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:236] Got a param lightY
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:235] lightZ=0.0
+
+2018-08-11 22:05:33 INFO  main [mtstensorflow.cpp:236] Got a param lightZ
+2018-08-11 22:05:34 INFO  main [mtstensorflow.cpp:350] Mitsuba version 0.6.0 (Linux, 64 bit), Copyright (c) 2017 Wenzel Jakob
+2018-08-11 22:05:34 INFO  main [SocketStream] Connecting to "ec2-18-207-183-170.compute-1.amazonaws.com:7554"
+2018-08-11 22:05:34 INFO  main [mtstensorflow.cpp:487] Enter mtssrv -h for more options
+2018-08-11 22:05:34 INFO  main [mtstensorflow.cpp:512] sassy-pc: Listening on port 7555.. Send Ctrl-C or SIGTERM to stop.
+2018-08-11 22:05:34 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:20:10 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:20:11 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:20:11 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:20:11 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:20:11 INFO  main [mtstensorflow.cpp:556] lightX:0.000000
+2018-08-11 22:20:11 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:20:11 INFO  main [mtstensorflow.cpp:556] lightZ:-1.000000
+2018-08-11 22:20:11 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:20:11 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red-diff.xml" ..
+2018-08-11 22:20:11 INFO  main [PluginManager] Loading plugin "plugins/bdptdiff.so" ..
+2018-08-11 22:20:11 INFO  main [PluginManager] Loading plugin "plugins/ldsampler.so" ..
+2018-08-11 22:20:11 INFO  main [PluginManager] Loading plugin "plugins/gaussian.so" ..
+2018-08-11 22:20:11 INFO  main [PluginManager] Loading plugin "plugins/hdrreductorfilm.so" ..
+2018-08-11 22:20:13 INFO  main [HDRReductorFilm] Finished reading from file. -0.019547, 256x256
+2018-08-11 22:20:13 INFO  main [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:20:13 INFO  main [ReductorImageBlock] Finished reading from file. -0.019547, 256x256
+ReductorImageBlock DATA: -0.061986
+2018-08-11 22:20:13 INFO  main [ReductorImageBlock] ReductorImageBlock created with dimensions 256, 256: Reductor texture size: 256, 256
+2018-08-11 22:20:13 INFO  main [HDRReductorFilm] Initialized reductor film.
+2018-08-11 22:20:13 INFO  main [PluginManager] Loading plugin "plugins/orthographic.so" ..
+2018-08-11 22:20:13 INFO  main [PluginManager] Loading plugin "plugins/diffuse.so" ..
+2018-08-11 22:20:13 INFO  main [PluginManager] Loading plugin "plugins/diffwrapper.so" ..
+2018-08-11 22:20:13 INFO  main [PluginManager] Loading plugin "plugins/directional.so" ..
+2018-08-11 22:20:13 INFO  main [PluginManager] Loading plugin "plugins/ply.so" ..
+2018-08-11 22:20:13 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_2.ply" ..
+2018-08-11 22:20:25 INFO  main [PLYLoader] "mts_mesh_copy_2": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11488 ms).
+2018-08-11 22:20:25 INFO  main [HDRReductorFilm] HDRFilm: HDRReductorFilm[
+  size = [256, 256],
+  fileFormat = 9,
+  pixelFormat = luminance, 
+  channelNames = "Y", 
+  componentFormat = float32,
+  cropOffset = [0, 0],
+  cropSize = [256, 256],
+  banner = 0,
+  filter = GaussianFilter[stddev=0.500000, radius=2.000000]
+]
+2018-08-11 22:20:25 INFO  main [HDRReductorFilm] HDRFilm::serialize 256x256
+2018-08-11 22:20:25 INFO  main [HDRReductorFilm] HDRFilm: HDRReductorFilm[
+  size = [256, 256],
+  fileFormat = 9,
+  pixelFormat = luminance, 
+  channelNames = "Y", 
+  componentFormat = float32,
+  cropOffset = [0, 0],
+  cropSize = [256, 256],
+  banner = 0,
+  filter = GaussianFilter[stddev=0.500000, radius=2.000000]
+]
+2018-08-11 22:20:25 INFO  main [HDRReductorFilm] HDRFilm::serialize 256x256
+2018-08-11 22:20:25 INFO  ren0 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:20:38 INFO  ren0 [KDTreeBase] Finished -- took 13163 ms.
+2018-08-11 22:20:38 INFO  ren0 [BDPTDiffIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+2018-08-11 22:20:38 INFO  wrk1 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:20:38 INFO  wrk1 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:20:38 INFO  wrk1 [HDRReductorFilm] getting reductor
+2018-08-11 22:20:38 INFO  wrk1 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:20:38 INFO  wrk1 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:20:38 INFO  wrk1 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:20:38 INFO  wrk1 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:20:38 INFO  wrk1 [ReductorImageBlock] Finished reading from file. -0.019547, 256x256
+ReductorImageBlock DATA: -0.061986
+2018-08-11 22:20:38 INFO  wrk1 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:20:38 INFO  net0 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:20:41 INFO  net0 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:20:41 INFO  net0 [HDRReductorFilm] getting reductor
+2018-08-11 22:20:41 INFO  net0 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:20:41 INFO  net0 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:20:41 INFO  net0 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:20:41 INFO  net0 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:20:41 INFO  net0 [ReductorImageBlock] Finished reading from file. -0.019547, 256x256
+ReductorImageBlock DATA: -0.061986
+2018-08-11 22:20:41 INFO  net0 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+Rendering: [                                            ] (2.2s, ETA: 2.3m)  
+2018-08-11 22:20:41 INFO  wrk1 [ReductorImageBlock] Accumulating 1089 elements 128, 128 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:20:42 INFO  net0_r[BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:20:42 INFO  net0_r[HDRReductorFilm] getting reductor
+2018-08-11 22:20:42 INFO  net0_r[BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:20:42 INFO  net0_r[BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:20:42 INFO  net0_r[BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Finished reading from file. -0.019547, 256x256
+ReductorImageBlock DATA: -0.061986
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+Rendering: [+                                           ] (3.5s, ETA: 1.8m)  
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 128 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 160 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 64 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 96 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 128 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 160 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 96 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 96 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 160 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 192 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 192 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 128 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 224 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 192 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 64 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 96 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 160 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 96 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 160 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 128 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 192 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 64 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 128 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 192 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 224 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 64 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 160 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 96 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 192 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 224 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 224 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 64 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 64 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 224 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 224 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 224 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 192 border: 2, 0
+2018-08-11 22:20:42 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 160 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 128 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 96 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 64 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 32 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 224 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 128 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 32 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 32 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 96 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 32, 0 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 32 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 192 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 32 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 160 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 32 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 0, 0 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 32 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 64 border: 2, 0
+Rendering: [+++++++++++++++++++++++++++++++++++++++     ] (4.5s, ETA: 0.5s)  
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 32 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 64, 0 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 192, 0 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 160, 0 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 128, 0 border: 2, 0
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 96, 0 border: 2, 0
+Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (4.6s, ETA: 0.0s)  
+2018-08-11 22:20:43 INFO  net0_r[ReductorImageBlock] Accumulating 1024 elements 224, 0 border: 2, 0
+2018-08-11 22:20:43 INFO  ren0 [RenderJob] Render time: 18.3070s
+2018-08-11 22:20:43 INFO  ren0 [HDRReductorFilm] Writing sparse map to "/tmp/mtsgradout-0.shds" ..
+2018-08-11 22:20:43 INFO  ren0 [HDRReductorFilm] Elements: 65536
+2018-08-11 22:20:43 INFO  ren0 [HDRReductorFilm] Width: 256
+2018-08-11 22:20:43 INFO  ren0 [HDRReductorFilm] Height: 256
+2018-08-11 22:20:43 INFO  ren0 [HDRReductorFilm] Done writing sparse map.
+2018-08-11 22:20:43 INFO  ren0 [HDRReductorFilm] Clearing Storage.. 65536 elements
+2018-08-11 22:20:43 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:20:43 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:20:44 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:20:44 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:20:44 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:20:44 INFO  main [mtstensorflow.cpp:556] lightX:-0.514000
+2018-08-11 22:20:44 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:20:44 INFO  main [mtstensorflow.cpp:556] lightZ:-0.857000
+2018-08-11 22:20:44 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:20:44 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red-diff.xml" ..
+2018-08-11 22:20:44 INFO  main [HDRReductorFilm] Finished reading from file. 0.042701, 256x256
+2018-08-11 22:20:44 INFO  main [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:20:44 INFO  main [ReductorImageBlock] Finished reading from file. 0.042701, 256x256
+ReductorImageBlock DATA: -0.008691
+2018-08-11 22:20:44 INFO  main [ReductorImageBlock] ReductorImageBlock created with dimensions 256, 256: Reductor texture size: 256, 256
+2018-08-11 22:20:44 INFO  main [HDRReductorFilm] Initialized reductor film.
+2018-08-11 22:20:44 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_2.ply" ..
+2018-08-11 22:20:56 INFO  main [PLYLoader] "mts_mesh_copy_2": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11446 ms).
+2018-08-11 22:20:56 INFO  main [HDRReductorFilm] HDRFilm: HDRReductorFilm[
+  size = [256, 256],
+  fileFormat = 9,
+  pixelFormat = luminance, 
+  channelNames = "Y", 
+  componentFormat = float32,
+  cropOffset = [0, 0],
+  cropSize = [256, 256],
+  banner = 0,
+  filter = GaussianFilter[stddev=0.500000, radius=2.000000]
+]
+2018-08-11 22:20:56 INFO  main [HDRReductorFilm] HDRFilm::serialize 256x256
+2018-08-11 22:20:56 INFO  main [HDRReductorFilm] HDRFilm: HDRReductorFilm[
+  size = [256, 256],
+  fileFormat = 9,
+  pixelFormat = luminance, 
+  channelNames = "Y", 
+  componentFormat = float32,
+  cropOffset = [0, 0],
+  cropSize = [256, 256],
+  banner = 0,
+  filter = GaussianFilter[stddev=0.500000, radius=2.000000]
+]
+2018-08-11 22:20:56 INFO  main [HDRReductorFilm] HDRFilm::serialize 256x256
+2018-08-11 22:20:56 INFO  ren1 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:21:08 INFO  ren1 [KDTreeBase] Finished -- took 11893 ms.
+2018-08-11 22:21:08 INFO  ren1 [BDPTDiffIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+2018-08-11 22:21:08 INFO  wrk1 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:21:08 INFO  wrk1 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:21:08 INFO  wrk1 [HDRReductorFilm] getting reductor
+2018-08-11 22:21:08 INFO  wrk1 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:21:08 INFO  wrk1 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:21:08 INFO  wrk1 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:21:08 INFO  wrk1 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:21:08 INFO  wrk1 [ReductorImageBlock] Finished reading from file. 0.042701, 256x256
+ReductorImageBlock DATA: -0.008691
+2018-08-11 22:21:08 INFO  wrk1 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:21:08 INFO  wrk1 [ReductorImageBlock] Destroying ReductorImageBlock: 1089 elements
+2018-08-11 22:21:08 INFO  wrk0 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:21:09 INFO  wrk0 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:21:09 INFO  wrk0 [HDRReductorFilm] getting reductor
+2018-08-11 22:21:09 INFO  wrk0 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:21:09 INFO  wrk0 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:21:10 INFO  wrk0 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:21:10 INFO  wrk0 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:21:10 INFO  wrk0 [ReductorImageBlock] Finished reading from file. 0.042701, 256x256
+ReductorImageBlock DATA: -0.008691
+2018-08-11 22:21:10 INFO  wrk0 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+Rendering: [                                            ] (2.2s, ETA: 2.3m)  
+2018-08-11 22:21:10 INFO  wrk1 [ReductorImageBlock] Accumulating 1089 elements 128, 128 border: 2, 0
+2018-08-11 22:21:10 INFO  net0 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:21:11 INFO  net0 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:21:11 INFO  net0 [HDRReductorFilm] getting reductor
+2018-08-11 22:21:12 INFO  net0 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:21:12 INFO  net0 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:21:12 INFO  net0 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:21:12 INFO  net0 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:21:12 INFO  net0 [ReductorImageBlock] Finished reading from file. 0.042701, 256x256
+ReductorImageBlock DATA: -0.008691
+2018-08-11 22:21:12 INFO  net0 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:21:12 INFO  net0 [ReductorImageBlock] Destroying ReductorImageBlock: 0 elements
+Rendering: [+                                           ] (4.4s, ETA: 2.3m)  
+2018-08-11 22:21:12 INFO  wrk0 [ReductorImageBlock] Accumulating 1089 elements 160, 128 border: 2, 0
+Rendering: [++                                          ] (8.4s, ETA: 2.9m)  
+2018-08-11 22:21:16 INFO  wrk1 [ReductorImageBlock] Accumulating 1089 elements 128, 160 border: 2, 0
+2018-08-11 22:21:17 INFO  wrk0 [ReductorImageBlock] Accumulating 1089 elements 96, 160 border: 2, 0
+2018-08-11 22:21:17 INFO  net0_r[BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:21:17 INFO  net0_r[BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:21:17 INFO  net0_r[HDRReductorFilm] getting reductor
+2018-08-11 22:21:17 INFO  net0_r[BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:21:17 INFO  net0_r[BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:21:17 INFO  net0_r[BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Finished reading from file. 0.042701, 256x256
+ReductorImageBlock DATA: -0.008691
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Destroying ReductorImageBlock: 1024 elements
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 192 border: 2, 0
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 64 border: 2, 0
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 128 border: 2, 0
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 96 border: 2, 0
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 160 border: 2, 0
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 96 border: 2, 0
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 160 border: 2, 0
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 224 border: 2, 0
+Rendering: [++++++++                                    ] (9.5s, ETA: 37.1s)  
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 160 border: 2, 0
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 128 border: 2, 0
+2018-08-11 22:21:17 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 192 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 192 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 96 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 160 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 128 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 96 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 192 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 64 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 128 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1090 elements 96, 96 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 64 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 64 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 224 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 96 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 64 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 192 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 160 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 224 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 192 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 192 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 224 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 64 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 128 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 224 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 224 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 224 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 96 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 32 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 64 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 224 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 128 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 96 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 32 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 32 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 32 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 32 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 32 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 192 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 160 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 32 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 32 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 64 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 64, 0 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 96, 0 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 0, 0 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 32, 0 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1024 elements 224, 0 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 128, 0 border: 2, 0
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 160, 0 border: 2, 0
+Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (10.4s, ETA: 0.0s)  
+2018-08-11 22:21:18 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 192, 0 border: 2, 0
+2018-08-11 22:21:18 INFO  ren1 [RenderJob] Render time: 22.7280s
+2018-08-11 22:21:18 INFO  ren1 [HDRReductorFilm] Writing sparse map to "/tmp/mtsgradout-0.shds" ..
+2018-08-11 22:21:19 INFO  ren1 [HDRReductorFilm] Elements: 65536
+2018-08-11 22:21:19 INFO  ren1 [HDRReductorFilm] Width: 256
+2018-08-11 22:21:19 INFO  ren1 [HDRReductorFilm] Height: 256
+2018-08-11 22:21:19 INFO  ren1 [HDRReductorFilm] Done writing sparse map.
+2018-08-11 22:21:19 INFO  ren1 [HDRReductorFilm] Clearing Storage.. 65536 elements
+2018-08-11 22:21:19 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:21:19 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:21:19 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:21:19 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:21:19 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:21:19 INFO  main [mtstensorflow.cpp:556] lightX:0.390000
+2018-08-11 22:21:19 INFO  main [mtstensorflow.cpp:556] lightY:0.650000
+2018-08-11 22:21:19 INFO  main [mtstensorflow.cpp:556] lightZ:-0.650000
+2018-08-11 22:21:19 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:21:19 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red-diff.xml" ..
+2018-08-11 22:21:19 INFO  main [HDRReductorFilm] Finished reading from file. -0.101236, 256x256
+2018-08-11 22:21:19 INFO  main [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:21:19 INFO  main [ReductorImageBlock] Finished reading from file. -0.101236, 256x256
+ReductorImageBlock DATA: -0.092372
+2018-08-11 22:21:19 INFO  main [ReductorImageBlock] ReductorImageBlock created with dimensions 256, 256: Reductor texture size: 256, 256
+2018-08-11 22:21:19 INFO  main [HDRReductorFilm] Initialized reductor film.
+2018-08-11 22:21:20 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_2.ply" ..
+2018-08-11 22:21:31 INFO  main [PLYLoader] "mts_mesh_copy_2": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11747 ms).
+2018-08-11 22:21:31 INFO  main [HDRReductorFilm] HDRFilm: HDRReductorFilm[
+  size = [256, 256],
+  fileFormat = 9,
+  pixelFormat = luminance, 
+  channelNames = "Y", 
+  componentFormat = float32,
+  cropOffset = [0, 0],
+  cropSize = [256, 256],
+  banner = 0,
+  filter = GaussianFilter[stddev=0.500000, radius=2.000000]
+]
+2018-08-11 22:21:31 INFO  main [HDRReductorFilm] HDRFilm::serialize 256x256
+2018-08-11 22:21:32 INFO  main [HDRReductorFilm] HDRFilm: HDRReductorFilm[
+  size = [256, 256],
+  fileFormat = 9,
+  pixelFormat = luminance, 
+  channelNames = "Y", 
+  componentFormat = float32,
+  cropOffset = [0, 0],
+  cropSize = [256, 256],
+  banner = 0,
+  filter = GaussianFilter[stddev=0.500000, radius=2.000000]
+]
+2018-08-11 22:21:32 INFO  main [HDRReductorFilm] HDRFilm::serialize 256x256
+2018-08-11 22:21:32 INFO  ren2 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:21:44 INFO  ren2 [KDTreeBase] Finished -- took 11978 ms.
+2018-08-11 22:21:44 INFO  ren2 [BDPTDiffIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+2018-08-11 22:21:44 INFO  wrk1 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:21:44 INFO  wrk1 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:21:44 INFO  wrk1 [HDRReductorFilm] getting reductor
+2018-08-11 22:21:44 INFO  wrk1 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:21:44 INFO  wrk1 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:21:44 INFO  wrk1 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:21:44 INFO  wrk1 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:21:44 INFO  wrk1 [ReductorImageBlock] Finished reading from file. -0.101236, 256x256
+ReductorImageBlock DATA: -0.092372
+2018-08-11 22:21:44 INFO  wrk1 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:21:44 INFO  wrk1 [ReductorImageBlock] Destroying ReductorImageBlock: 1089 elements
+2018-08-11 22:21:44 INFO  net0 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:21:46 INFO  net0 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:21:46 INFO  net0 [HDRReductorFilm] getting reductor
+2018-08-11 22:21:46 INFO  net0 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:21:46 INFO  net0 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:21:46 INFO  net0 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:21:46 INFO  net0 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:21:46 INFO  net0 [ReductorImageBlock] Finished reading from file. -0.101236, 256x256
+ReductorImageBlock DATA: -0.092372
+2018-08-11 22:21:46 INFO  net0 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:21:46 INFO  net0 [ReductorImageBlock] Destroying ReductorImageBlock: 0 elements
+Rendering: [                                            ] (2.2s, ETA: 2.3m)  
+2018-08-11 22:21:46 INFO  wrk0 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:21:46 INFO  wrk0 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:21:46 INFO  wrk0 [HDRReductorFilm] getting reductor
+2018-08-11 22:21:46 INFO  wrk0 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:21:46 INFO  wrk0 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:21:46 INFO  wrk0 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:21:46 INFO  wrk0 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:21:46 INFO  wrk0 [ReductorImageBlock] Finished reading from file. -0.101236, 256x256
+ReductorImageBlock DATA: -0.092372
+2018-08-11 22:21:46 INFO  wrk0 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:21:46 INFO  wrk0 [ReductorImageBlock] Destroying ReductorImageBlock: 1089 elements
+2018-08-11 22:21:46 INFO  wrk1 [ReductorImageBlock] Accumulating 1089 elements 128, 128 border: 2, 0
+Rendering: [+                                           ] (4.3s, ETA: 2.2m)  
+2018-08-11 22:21:48 INFO  wrk0 [ReductorImageBlock] Accumulating 1089 elements 160, 160 border: 2, 0
+Rendering: [++                                          ] (7.5s, ETA: 2.5m)  
+2018-08-11 22:21:51 INFO  wrk1 [ReductorImageBlock] Accumulating 1089 elements 192, 192 border: 2, 0
+Rendering: [++                                          ] (9.0s, ETA: 2.2m)  
+2018-08-11 22:21:53 INFO  wrk1 [ReductorImageBlock] Accumulating 0 elements 0, 160 border: 2, 0
+2018-08-11 22:21:53 INFO  wrk0 [ReductorImageBlock] Accumulating 1089 elements 160, 192 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:21:54 INFO  net0_r[BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:21:54 INFO  net0_r[HDRReductorFilm] getting reductor
+2018-08-11 22:21:54 INFO  net0_r[BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:21:54 INFO  net0_r[BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:21:54 INFO  net0_r[BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Finished reading from file. -0.101236, 256x256
+ReductorImageBlock DATA: -0.092372
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Destroying ReductorImageBlock: 1056 elements
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 64, 192 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 64, 64 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 64, 128 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 99 elements 96, 160 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 64, 160 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 99 elements 96, 128 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 64, 96 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 99 elements 96, 96 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 32, 224 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 99 elements 96, 192 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 32, 192 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 64, 224 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 99 elements 96, 64 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 32, 160 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 32, 128 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 99 elements 96, 224 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 224 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 32, 64 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 32, 96 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 32, 32 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 64, 32 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 128 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 0, 192 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 0, 224 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 128 border: 2, 0
+Rendering: [+++++++++++++++++++++                       ] (10.0s, ETA: 10.6s)  
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 192 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 0, 32 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 0, 128 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 96 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 64 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 96 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 128 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 160 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 160 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 96 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 64 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 0, 96 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 0, 64 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 160 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 99 elements 96, 32 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 96 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 224 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 64 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 192 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 224 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 224 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 64 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 32 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 32 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 32 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 32 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 64, 0 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 95 elements 96, 0 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 0, 0 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 0 elements 32, 0 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 128, 0 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1024 elements 224, 0 border: 2, 0
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 192, 0 border: 2, 0
+Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (10.4s, ETA: 0.0s)  
+2018-08-11 22:21:54 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 160, 0 border: 2, 0
+2018-08-11 22:21:54 INFO  ren2 [RenderJob] Render time: 22.8800s
+2018-08-11 22:21:54 INFO  ren2 [HDRReductorFilm] Writing sparse map to "/tmp/mtsgradout-0.shds" ..
+2018-08-11 22:21:54 INFO  ren2 [HDRReductorFilm] Elements: 33279
+2018-08-11 22:21:54 INFO  ren2 [HDRReductorFilm] Width: 256
+2018-08-11 22:21:54 INFO  ren2 [HDRReductorFilm] Height: 256
+2018-08-11 22:21:54 INFO  ren2 [HDRReductorFilm] Done writing sparse map.
+2018-08-11 22:21:54 INFO  ren2 [HDRReductorFilm] Clearing Storage.. 33279 elements
+2018-08-11 22:21:54 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:27:35 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:27:36 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:27:36 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:27:36 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:27:36 INFO  main [mtstensorflow.cpp:556] lightX:0.000000
+2018-08-11 22:27:36 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:27:36 INFO  main [mtstensorflow.cpp:556] lightZ:-1.000000
+2018-08-11 22:27:36 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:27:36 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red-diff.xml" ..
+2018-08-11 22:27:36 INFO  main [HDRReductorFilm] Finished reading from file. 0.010756, 256x256
+2018-08-11 22:27:36 INFO  main [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:27:36 INFO  main [ReductorImageBlock] Finished reading from file. 0.010756, 256x256
+ReductorImageBlock DATA: -0.054599
+2018-08-11 22:27:36 INFO  main [ReductorImageBlock] ReductorImageBlock created with dimensions 256, 256: Reductor texture size: 256, 256
+2018-08-11 22:27:36 INFO  main [HDRReductorFilm] Initialized reductor film.
+2018-08-11 22:27:36 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_2.ply" ..
+2018-08-11 22:27:48 INFO  main [PLYLoader] "mts_mesh_copy_2": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11559 ms).
+2018-08-11 22:27:48 INFO  main [HDRReductorFilm] HDRFilm: HDRReductorFilm[
+  size = [256, 256],
+  fileFormat = 9,
+  pixelFormat = luminance, 
+  channelNames = "Y", 
+  componentFormat = float32,
+  cropOffset = [0, 0],
+  cropSize = [256, 256],
+  banner = 0,
+  filter = GaussianFilter[stddev=0.500000, radius=2.000000]
+]
+2018-08-11 22:27:48 INFO  main [HDRReductorFilm] HDRFilm::serialize 256x256
+2018-08-11 22:27:48 INFO  main [HDRReductorFilm] HDRFilm: HDRReductorFilm[
+  size = [256, 256],
+  fileFormat = 9,
+  pixelFormat = luminance, 
+  channelNames = "Y", 
+  componentFormat = float32,
+  cropOffset = [0, 0],
+  cropSize = [256, 256],
+  banner = 0,
+  filter = GaussianFilter[stddev=0.500000, radius=2.000000]
+]
+2018-08-11 22:27:48 INFO  main [HDRReductorFilm] HDRFilm::serialize 256x256
+2018-08-11 22:27:48 INFO  ren3 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:28:01 INFO  ren3 [KDTreeBase] Finished -- took 12449 ms.
+2018-08-11 22:28:01 INFO  ren3 [BDPTDiffIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+2018-08-11 22:28:01 INFO  wrk1 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:28:01 INFO  wrk1 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:28:01 INFO  wrk1 [HDRReductorFilm] getting reductor
+2018-08-11 22:28:01 INFO  wrk1 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:28:01 INFO  wrk1 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:28:01 INFO  wrk1 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:28:01 INFO  wrk1 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:28:01 INFO  wrk1 [ReductorImageBlock] Finished reading from file. 0.010756, 256x256
+ReductorImageBlock DATA: -0.054599
+2018-08-11 22:28:01 INFO  wrk1 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:28:01 INFO  wrk1 [ReductorImageBlock] Destroying ReductorImageBlock: 0 elements
+2018-08-11 22:28:01 INFO  wrk0 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:28:01 INFO  wrk0 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:28:01 INFO  wrk0 [HDRReductorFilm] getting reductor
+2018-08-11 22:28:01 INFO  wrk0 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:28:02 INFO  wrk0 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:28:02 INFO  wrk0 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:28:02 INFO  wrk0 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:28:03 INFO  wrk0 [ReductorImageBlock] Finished reading from file. 0.010756, 256x256
+ReductorImageBlock DATA: -0.054599
+2018-08-11 22:28:03 INFO  wrk0 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:28:03 INFO  wrk0 [ReductorImageBlock] Destroying ReductorImageBlock: 1089 elements
+Rendering: [                                            ] (2.2s, ETA: 2.3m)  
+2018-08-11 22:28:03 INFO  net0 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:28:05 INFO  net0 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:28:05 INFO  net0 [HDRReductorFilm] getting reductor
+2018-08-11 22:28:05 INFO  net0 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:28:05 INFO  net0 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:28:05 INFO  net0 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:28:05 INFO  net0 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:28:05 INFO  net0 [ReductorImageBlock] Finished reading from file. 0.010756, 256x256
+ReductorImageBlock DATA: -0.054599
+2018-08-11 22:28:05 INFO  net0 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:28:05 INFO  net0 [ReductorImageBlock] Destroying ReductorImageBlock: 0 elements
+2018-08-11 22:28:03 INFO  wrk1 [ReductorImageBlock] Accumulating 1089 elements 128, 128 border: 2, 0
+Rendering: [+                                           ] (4.3s, ETA: 2.2m)  
+2018-08-11 22:28:05 INFO  wrk0 [ReductorImageBlock] Accumulating 1089 elements 160, 128 border: 2, 0
+Rendering: [++                                          ] (7.5s, ETA: 2.5m)  
+2018-08-11 22:28:08 INFO  wrk1 [ReductorImageBlock] Accumulating 1089 elements 128, 160 border: 2, 0
+Rendering: [++                                          ] (8.9s, ETA: 2.2m)  
+2018-08-11 22:28:10 INFO  wrk0 [ReductorImageBlock] Accumulating 1089 elements 160, 96 border: 2, 0
+Rendering: [+++                                         ] (10.7s, ETA: 2.1m)  
+2018-08-11 22:28:11 INFO  wrk1 [ReductorImageBlock] Accumulating 1056 elements 0, 0 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:28:12 INFO  net0_r[BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:28:12 INFO  net0_r[HDRReductorFilm] getting reductor
+2018-08-11 22:28:12 INFO  net0_r[BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:28:12 INFO  net0_r[BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:28:12 INFO  net0_r[BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Finished reading from file. 0.010756, 256x256
+ReductorImageBlock DATA: -0.054599
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Destroying ReductorImageBlock: 1056 elements
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 128 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 192 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 160 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 160 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 96 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 192 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 96 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 64 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 192 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 224 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 128 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 160 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 192 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 128 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 64 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 96 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 96 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 160 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 224 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 128 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 96 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 160 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 64 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 224 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 64 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 64 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 192 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 192 border: 2, 0
+Rendering: [+++++++++++++++++++++++                     ] (11.7s, ETA: 10.3s)  
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 224 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 224 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 192 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 64 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 224 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 160 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 224 border: 2, 0
+2018-08-11 22:28:12 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 128 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 64 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 32 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 96 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 32 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 32 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 32 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 224 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 32 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 32 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 192 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 160 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 32 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 128 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 96 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 32 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 64 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 64, 0 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 160, 0 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 128, 0 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 32, 0 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 96, 0 border: 2, 0
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1024 elements 224, 0 border: 2, 0
+Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (12.3s, ETA: 0.0s)  
+2018-08-11 22:28:13 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 192, 0 border: 2, 0
+2018-08-11 22:28:13 INFO  ren3 [RenderJob] Render time: 25.1970s
+2018-08-11 22:28:13 INFO  ren3 [HDRReductorFilm] Writing sparse map to "/tmp/mtsgradout-0.shds" ..
+2018-08-11 22:28:13 INFO  ren3 [HDRReductorFilm] Elements: 65536
+2018-08-11 22:28:13 INFO  ren3 [HDRReductorFilm] Width: 256
+2018-08-11 22:28:13 INFO  ren3 [HDRReductorFilm] Height: 256
+2018-08-11 22:28:13 INFO  ren3 [HDRReductorFilm] Done writing sparse map.
+2018-08-11 22:28:13 INFO  ren3 [HDRReductorFilm] Clearing Storage.. 65536 elements
+2018-08-11 22:28:13 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:28:13 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:28:14 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:28:14 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:28:14 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:28:14 INFO  main [mtstensorflow.cpp:556] lightX:-0.514000
+2018-08-11 22:28:14 INFO  main [mtstensorflow.cpp:556] lightY:0.000000
+2018-08-11 22:28:14 INFO  main [mtstensorflow.cpp:556] lightZ:-0.857000
+2018-08-11 22:28:14 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:28:14 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red-diff.xml" ..
+2018-08-11 22:28:14 INFO  main [HDRReductorFilm] Finished reading from file. 0.018290, 256x256
+2018-08-11 22:28:14 INFO  main [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:28:14 INFO  main [ReductorImageBlock] Finished reading from file. 0.018290, 256x256
+ReductorImageBlock DATA: -0.046750
+2018-08-11 22:28:14 INFO  main [ReductorImageBlock] ReductorImageBlock created with dimensions 256, 256: Reductor texture size: 256, 256
+2018-08-11 22:28:14 INFO  main [HDRReductorFilm] Initialized reductor film.
+2018-08-11 22:28:14 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_2.ply" ..
+2018-08-11 22:28:26 INFO  main [PLYLoader] "mts_mesh_copy_2": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11542 ms).
+2018-08-11 22:28:26 INFO  main [HDRReductorFilm] HDRFilm: HDRReductorFilm[
+  size = [256, 256],
+  fileFormat = 9,
+  pixelFormat = luminance, 
+  channelNames = "Y", 
+  componentFormat = float32,
+  cropOffset = [0, 0],
+  cropSize = [256, 256],
+  banner = 0,
+  filter = GaussianFilter[stddev=0.500000, radius=2.000000]
+]
+2018-08-11 22:28:26 INFO  main [HDRReductorFilm] HDRFilm::serialize 256x256
+2018-08-11 22:28:26 INFO  main [HDRReductorFilm] HDRFilm: HDRReductorFilm[
+  size = [256, 256],
+  fileFormat = 9,
+  pixelFormat = luminance, 
+  channelNames = "Y", 
+  componentFormat = float32,
+  cropOffset = [0, 0],
+  cropSize = [256, 256],
+  banner = 0,
+  filter = GaussianFilter[stddev=0.500000, radius=2.000000]
+]
+2018-08-11 22:28:26 INFO  main [HDRReductorFilm] HDRFilm::serialize 256x256
+2018-08-11 22:28:26 INFO  ren4 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:28:39 INFO  ren4 [KDTreeBase] Finished -- took 12478 ms.
+2018-08-11 22:28:39 INFO  ren4 [BDPTDiffIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+2018-08-11 22:28:39 INFO  net0 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:28:39 INFO  net0 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:28:39 INFO  net0 [HDRReductorFilm] getting reductor
+2018-08-11 22:28:39 INFO  net0 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:28:39 INFO  net0 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:28:39 INFO  net0 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:28:39 INFO  net0 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:28:39 INFO  net0 [ReductorImageBlock] Finished reading from file. 0.018290, 256x256
+ReductorImageBlock DATA: -0.046750
+2018-08-11 22:28:39 INFO  net0 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:28:39 INFO  net0 [ReductorImageBlock] Destroying ReductorImageBlock: 0 elements
+2018-08-11 22:28:39 INFO  wrk0 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:28:39 INFO  wrk0 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:28:39 INFO  wrk0 [HDRReductorFilm] getting reductor
+2018-08-11 22:28:39 INFO  wrk0 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:28:39 INFO  wrk0 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:28:39 INFO  wrk0 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:28:39 INFO  wrk0 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:28:39 INFO  wrk0 [ReductorImageBlock] Finished reading from file. 0.018290, 256x256
+ReductorImageBlock DATA: -0.046750
+2018-08-11 22:28:39 INFO  wrk0 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:28:39 INFO  wrk0 [ReductorImageBlock] Destroying ReductorImageBlock: 1089 elements
+2018-08-11 22:28:39 INFO  net0_r[BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:28:39 INFO  net0_r[BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:28:39 INFO  net0_r[HDRReductorFilm] getting reductor
+2018-08-11 22:28:39 INFO  net0_r[BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:28:39 INFO  net0_r[BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:28:39 INFO  net0_r[BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Finished reading from file. 0.018290, 256x256
+ReductorImageBlock DATA: -0.046750
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Destroying ReductorImageBlock: 1056 elements
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 128 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 64 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 128 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 224 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 96 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 192 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 128 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 160 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 192 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1090 elements 192, 192 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 128 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 160 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 96 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 160 border: 2, 0
+2018-08-11 22:28:39 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 128 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 64 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 96 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 128 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 192 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 160 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 160 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 160 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 96 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 96 border: 2, 0
+Rendering: [+++++++++++++++++                           ] (1.0s, ETA: 1.6s)  
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 96 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 64 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 64 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 224 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 192 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 224 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 192 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 224 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 224 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 64 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 224 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 64 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 224 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 192 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 32 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 32 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 224 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 32 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 32 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 96, 32 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 160 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 96 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 128 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 32, 64 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 64, 32 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 32 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 192 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 160 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 0, 0 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 96 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 32, 0 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 64, 0 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 32 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1024 elements 224, 0 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 96, 0 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 160, 0 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 128, 0 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 128 border: 2, 0
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 0, 64 border: 2, 0
+Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (1.7s, ETA: 0.0s)  
+2018-08-11 22:28:40 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 192, 0 border: 2, 0
+2018-08-11 22:28:40 INFO  ren4 [RenderJob] Render time: 14.6790s
+2018-08-11 22:28:40 INFO  ren4 [HDRReductorFilm] Writing sparse map to "/tmp/mtsgradout-0.shds" ..
+2018-08-11 22:28:41 INFO  ren4 [HDRReductorFilm] Elements: 65536
+2018-08-11 22:28:41 INFO  ren4 [HDRReductorFilm] Width: 256
+2018-08-11 22:28:41 INFO  ren4 [HDRReductorFilm] Height: 256
+2018-08-11 22:28:41 INFO  ren4 [HDRReductorFilm] Done writing sparse map.
+2018-08-11 22:28:41 INFO  ren4 [HDRReductorFilm] Clearing Storage.. 65536 elements
+2018-08-11 22:28:41 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:28:41 INFO  main [mtstensorflow.cpp:542] Got a connection.
+2018-08-11 22:28:41 INFO  main [mtstensorflow.cpp:547] Num parameters: 5
+2018-08-11 22:28:41 INFO  main [mtstensorflow.cpp:556] depth:2.000000
+2018-08-11 22:28:41 INFO  main [mtstensorflow.cpp:556] sampleCount:16.000000
+2018-08-11 22:28:41 INFO  main [mtstensorflow.cpp:556] lightX:0.390000
+2018-08-11 22:28:41 INFO  main [mtstensorflow.cpp:556] lightY:0.650000
+2018-08-11 22:28:41 INFO  main [mtstensorflow.cpp:556] lightZ:-0.650000
+2018-08-11 22:28:41 INFO  main [mtstensorflow.cpp:562] Rendering.. 
+2018-08-11 22:28:41 INFO  main [mtstensorflow.cpp:576] Parsing scene description from "/home/sassy/thesis/thesis-689/temporary/vtxscenes/tf_dir_ostereo_red-diff.xml" ..
+2018-08-11 22:28:41 INFO  main [HDRReductorFilm] Finished reading from file. -0.004207, 256x256
+2018-08-11 22:28:41 INFO  main [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:28:41 INFO  main [ReductorImageBlock] Finished reading from file. -0.004207, 256x256
+ReductorImageBlock DATA: -0.090538
+2018-08-11 22:28:41 INFO  main [ReductorImageBlock] ReductorImageBlock created with dimensions 256, 256: Reductor texture size: 256, 256
+2018-08-11 22:28:41 INFO  main [HDRReductorFilm] Initialized reductor film.
+2018-08-11 22:28:42 INFO  main [PLYLoader] Loading geometry from "mts_mesh_copy_2.ply" ..
+2018-08-11 22:28:53 INFO  main [PLYLoader] "mts_mesh_copy_2": Loaded 130050 triangles, 65536 vertices (3.0 MiB in 11604 ms).
+2018-08-11 22:28:53 INFO  main [HDRReductorFilm] HDRFilm: HDRReductorFilm[
+  size = [256, 256],
+  fileFormat = 9,
+  pixelFormat = luminance, 
+  channelNames = "Y", 
+  componentFormat = float32,
+  cropOffset = [0, 0],
+  cropSize = [256, 256],
+  banner = 0,
+  filter = GaussianFilter[stddev=0.500000, radius=2.000000]
+]
+2018-08-11 22:28:53 INFO  main [HDRReductorFilm] HDRFilm::serialize 256x256
+2018-08-11 22:28:54 INFO  main [HDRReductorFilm] HDRFilm: HDRReductorFilm[
+  size = [256, 256],
+  fileFormat = 9,
+  pixelFormat = luminance, 
+  channelNames = "Y", 
+  componentFormat = float32,
+  cropOffset = [0, 0],
+  cropSize = [256, 256],
+  banner = 0,
+  filter = GaussianFilter[stddev=0.500000, radius=2.000000]
+]
+2018-08-11 22:28:54 INFO  main [HDRReductorFilm] HDRFilm::serialize 256x256
+2018-08-11 22:28:54 INFO  ren5 [KDTreeBase] Constructing a SAH kd-tree (130050 primitives) ..
+2018-08-11 22:29:05 INFO  ren5 [KDTreeBase] Finished -- took 11857 ms.
+2018-08-11 22:29:06 INFO  ren5 [BDPTDiffIntegrator] Starting render job (256x256, 16 samples, 38 cores, SSE2 enabled) ..
+2018-08-11 22:29:06 INFO  wrk0 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:29:06 INFO  wrk0 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:29:06 INFO  wrk0 [HDRReductorFilm] getting reductor
+2018-08-11 22:29:06 INFO  wrk0 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:29:06 INFO  wrk0 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:29:06 INFO  wrk0 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:29:06 INFO  wrk0 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:29:06 INFO  wrk0 [ReductorImageBlock] Finished reading from file. -0.004207, 256x256
+ReductorImageBlock DATA: -0.090538
+2018-08-11 22:29:06 INFO  wrk0 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:29:06 INFO  wrk0 [ReductorImageBlock] Destroying ReductorImageBlock: 0 elements
+2018-08-11 22:29:06 INFO  wrk1 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:29:06 INFO  wrk1 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:29:06 INFO  wrk1 [HDRReductorFilm] getting reductor
+2018-08-11 22:29:06 INFO  wrk1 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:29:06 INFO  wrk1 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:29:06 INFO  wrk1 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:29:06 INFO  wrk1 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:29:06 INFO  wrk1 [ReductorImageBlock] Finished reading from file. -0.004207, 256x256
+ReductorImageBlock DATA: -0.090538
+2018-08-11 22:29:06 INFO  wrk1 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:29:06 INFO  wrk1 [ReductorImageBlock] Destroying ReductorImageBlock: 1056 elements
+2018-08-11 22:29:07 INFO  net0 [BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:29:07 INFO  net0 [BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:29:07 INFO  net0 [HDRReductorFilm] getting reductor
+2018-08-11 22:29:07 INFO  net0 [BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:29:07 INFO  net0 [BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:29:07 INFO  net0 [BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:29:07 INFO  net0 [ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:29:07 INFO  net0 [ReductorImageBlock] Finished reading from file. -0.004207, 256x256
+ReductorImageBlock DATA: -0.090538
+2018-08-11 22:29:09 INFO  net0 [ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:29:09 INFO  net0 [ReductorImageBlock] Destroying ReductorImageBlock: 0 elements
+Rendering: [                                            ] (2.5s, ETA: 2.6m)  
+2018-08-11 22:29:09 INFO  wrk0 [ReductorImageBlock] Accumulating 1089 elements 128, 128 border: 2, 0
+Rendering: [+                                           ] (4.3s, ETA: 2.2m)  
+2018-08-11 22:29:10 INFO  wrk1 [ReductorImageBlock] Accumulating 1089 elements 160, 128 border: 2, 0
+Rendering: [++                                          ] (6.0s, ETA: 2.0m)  
+2018-08-11 22:29:12 INFO  wrk0 [ReductorImageBlock] Accumulating 14 elements 64, 192 border: 2, 0
+2018-08-11 22:29:12 INFO  wrk1 [ReductorImageBlock] Accumulating 132 elements 96, 192 border: 2, 0
+Rendering: [+++                                         ] (7.2s, ETA: 1.4m)  
+2018-08-11 22:29:13 INFO  wrk0 [ReductorImageBlock] Accumulating 501 elements 32, 32 border: 2, 0
+2018-08-11 22:29:14 INFO  wrk1 [ReductorImageBlock] Accumulating 52 elements 64, 32 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[BDPTDiffRenderer] Creating BDPTDiffRenderer
+2018-08-11 22:29:14 INFO  net0_r[BDPTDiffRenderer] Preparing BDPTDiffRenderer
+2018-08-11 22:29:14 INFO  net0_r[HDRReductorFilm] getting reductor
+2018-08-11 22:29:14 INFO  net0_r[BDPTDiffRenderer] DiffRenderer: 256x256
+2018-08-11 22:29:14 INFO  net0_r[BDPTDiffRenderer] createWorkResult DATA: 256x256
+2018-08-11 22:29:14 INFO  net0_r[BDPTDiffWorkResult] Created Work Result: 32 x 32
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Creating reductor image block.. 256x256
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Finished reading from file. -0.004207, 256x256
+ReductorImageBlock DATA: -0.090538
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] ReductorImageBlock created with dimensions 32, 32: Reductor texture size: 256, 256
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Destroying ReductorImageBlock: 1056 elements
+Rendering: [++++                                        ] (8.5s, ETA: 1.2m)  
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 43 elements 64, 160 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 33 elements 64, 128 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 50 elements 64, 96 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 37 elements 64, 64 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 132 elements 96, 160 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 132 elements 96, 96 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 17 elements 64, 224 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 132 elements 96, 128 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 460 elements 32, 224 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 132 elements 96, 64 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 439 elements 32, 160 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 501 elements 32, 192 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 441 elements 32, 128 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 132 elements 96, 224 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 96 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 160 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 96 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 192 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 160 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 192 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 128 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 192 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 458 elements 32, 96 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 224 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 488 elements 32, 64 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 128 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 64 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 160 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 160 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 96 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 64 border: 2, 0
+2018-08-11 22:29:14 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 192 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 64 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 224 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 132 elements 96, 32 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 224 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 224 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 96 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 64 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 911 elements 0, 224 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 853 elements 0, 96 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 864 elements 0, 32 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 931 elements 0, 160 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 897 elements 0, 128 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 861 elements 0, 64 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 837 elements 0, 192 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 192, 32 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 160, 32 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 224, 32 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 922 elements 0, 0 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1089 elements 128, 32 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 33 elements 64, 0 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 514 elements 32, 0 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 127 elements 96, 0 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 160, 0 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1024 elements 224, 0 border: 2, 0
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 192, 0 border: 2, 0
+Rendering: [++++++++++++++++++++++++++++++++++++++++++++] (9.3s, ETA: 0.0s)  
+2018-08-11 22:29:15 INFO  net0_r[ReductorImageBlock] Accumulating 1056 elements 128, 0 border: 2, 0
+2018-08-11 22:29:15 INFO  ren5 [RenderJob] Render time: 21.6440s
+2018-08-11 22:29:15 INFO  ren5 [HDRReductorFilm] Writing sparse map to "/tmp/mtsgradout-0.shds" ..
+2018-08-11 22:29:15 INFO  ren5 [HDRReductorFilm] Elements: 44354
+2018-08-11 22:29:15 INFO  ren5 [HDRReductorFilm] Width: 256
+2018-08-11 22:29:15 INFO  ren5 [HDRReductorFilm] Height: 256
+2018-08-11 22:29:15 INFO  ren5 [HDRReductorFilm] Done writing sparse map.
+2018-08-11 22:29:15 INFO  ren5 [HDRReductorFilm] Clearing Storage.. 44354 elements
+2018-08-11 22:29:15 INFO  main [mtstensorflow.cpp:520] Waiting for connections.
+2018-08-11 22:30:32 INFO  main [mtstensorflow.cpp:90] Caught signal - shutting down..
+2018-08-11 22:30:32 INFO  main [mtstensorflow.cpp:527] Received invalid connection.
+2018-08-11 22:30:32 INFO  main [statistics.cpp:142] Statistics:
+------------------------------------------------------------
+ * Loaded plugins :
+    -  plugins/bdptdiff.so [Bidirectional path tracer to compute differentials]
+    -  plugins/diffuse.so [Smooth diffuse BRDF]
+    -  plugins/diffwrapper.so [Normal map modifier]
+    -  plugins/directional.so [Directional emitter]
+    -  plugins/gaussian.so [Gaussian reconstruction filter]
+    -  plugins/hdrreductorfilm.so [High dynamic range film with reductor texture]
+    -  plugins/ldsampler.so [Low discrepancy sampler]
+    -  plugins/orthographic.so [Orthographics camera]
+    -  plugins/ply.so [PLY mesh loader]
+
+  * General :
+    -  Normal rays traced : 1.401 M
+
+  * Network :
+    -  Bytes received : 100.617 M
+    -  Bytes sent : 22.552 M
+------------------------------------------------------------
+2018-08-11 22:30:32 INFO  main [ReductorImageBlock] Destroying ReductorImageBlock: 501 elements
+2018-08-11 22:30:32 INFO  main [ReductorImageBlock] Destroying ReductorImageBlock: 52 elements
+2018-08-11 22:30:32 INFO  main [ReductorImageBlock] Destroying ReductorImageBlock: 0 elements
+2018-08-11 22:30:32 INFO  main [ReductorImageBlock] Destroying ReductorImageBlock: 1056 elements

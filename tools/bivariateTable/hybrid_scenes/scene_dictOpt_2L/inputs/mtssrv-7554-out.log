@@ -1,0 +1,9 @@
+2019-11-05 04:17:24 INFO  main [mtssrv.cpp:230] Mitsuba version 0.6.0 (Linux, 64 bit), Copyright (c) 2017 Wenzel Jakob
+2019-11-05 04:17:24 INFO  main [mtssrv.cpp:339] Enter mtssrv -h for more options
+2019-11-05 04:17:24 INFO  main [mtssrv.cpp:364] 127.0.0.1: Listening on port 7554.. Send Ctrl-C or SIGTERM to stop.
+2019-11-05 04:17:30 INFO  con0 [StreamBackend] Incoming from 127.0.0.1
+2019-11-05 04:17:30 WARN  con0 [StreamBackend] SPECTURM_SAMPLES: 3
+2019-11-05 04:17:30 WARN  con0 [StreamBackend] REfdata: 0
+2019-11-05 04:17:30 INFO  con1 [StreamBackend] Incoming from 127.0.0.1
+2019-11-05 04:17:30 WARN  con1 [StreamBackend] SPECTURM_SAMPLES: 3
+2019-11-05 04:17:30 WARN  con1 [StreamBackend] REfdata: 0

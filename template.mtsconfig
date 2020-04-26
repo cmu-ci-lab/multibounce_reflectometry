@@ -1,0 +1,10 @@
+{
+"MTSCFG_AWS_AUTODETECT": true,
+"MTSCFG_AWS_GIT_UPDATE": true,
+"MTSCFG_NODES": [],
+"MTSCFG_SERVERS": [],
+"MTSCFG_AWS_SSHKEY": "/home/sassy/.ssh/saipravb-ubuntu-ohio.pem",
+"MTSCFG_AWS_KEYNAME": "saipravb-ubuntu-ohio",
+"MTSCFG_AWS_GIT_UPDATE": false,
+"MTSCFG_DATA_REPOSITORY": "/media/sassy/Datasets-Vol-III/thesis/tests/"
+}

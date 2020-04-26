@@ -1,0 +1,157 @@
+{
+    "version": {"major":1, "minor":0},
+    "name": "test-bowl",
+    "description": "Tests non lambertian surface reconstruction",
+
+    "estimator": {
+        "optimizer": {
+            "type": "grouped-adam",
+            "params-generator": {
+                "type": "factor",
+                "factor": 0.98,
+                "initial-value": 0.0
+            },
+            "beta1": 0.9,
+            "beta2": 0.99
+        },
+        "iterations": 1,
+        "samples": {
+            "type": "variable",
+            "stops": [300],
+            "samples": [1024]
+        },
+        "depth": -1,
+        "albedo": false,
+        "hyper-parameters": "weights/initialization.npy",
+        "normalize-gradients": false
+    },
+
+    "base-port": 7654,
+
+    "hyper-parameter-list": "parameters.json",
+    "weight-estimation": {
+        "enabled": true,
+        "samples": 512,
+        "depth": -1,
+        "mesh": "meshes/photometric.ply",
+        "scene": "scenes/dictionary-scene.xml",
+        "dfile": "dictionary.npy"
+    },
+    "bsdf-estimator": {
+        "optimizer": {
+            "type": "eg-adam",
+            "params-generator": {
+                "type": "factor",
+                "factor": 0.98,
+                "initial-value": 0.1
+            },
+            "beta1": 0.8,
+            "beta2": 0.99995,
+            "sets": "main-only"
+        },
+        "iterations": 280,
+        "samples": {
+            "type": "variable",
+            "stops": [300],
+            "samples":[512]
+        },
+        "depth": -1,
+        "hyper-parameters": "weights/initialization.npy",
+        "pre-project": false,
+        "weight-reprojection": true,
+        "update-list": true,
+        "bsdf-first": true,
+        "extended-phase": 10
+    },
+
+    "zero-padding": "zero-padding.json",
+
+    "bsdf-preprocess": {
+        "enabled": true,
+        "file": "bsdf-dictionary.json"
+    },
+
+    "lights": {
+        "file": "lights/light-directions.lt",
+        "intensity-file": "lights/light-intensities.lt",
+        "recalibrate": true
+    },
+
+    "initialization": {
+        "file": "meshes/photometric.ply"
+    },
+
+    "remesher": {
+        "enabled": true,
+        "iterations": 40,
+        "keep-normals": false,
+        "integrator": "poisson"
+    },
+
+    "scenes": {
+        "intensity": "scenes/intensity-scene.xml",
+        "gradient": "scenes/gradient-scene.xml",
+        "normals": "scenes/normals-scene.xml",
+        "colors": "scenes/colors-scene.xml"
+    },
+
+    "output-link": {
+        "intensity": "/tmp/mtsout-0.hds",
+        "gradient": "/tmp/mtsgradout-0.shds"
+    },
+
+    "logging": {
+        "intensity": {
+            "stdout":"out-0.log",
+            "stderr":"err-0.log"
+        },
+        "gradient": {
+            "stdout":"out-1.log",
+            "stderr":"err-1.log"
+        }
+    },
+
+    "multiresolution": {
+        "enabled":true,
+        "type":"static-list",
+        "schedule": [7,10,15],
+        "values": [1,1,1]
+    },
+
+    "distribution": {
+        "enabled": true,
+        "type": "multi",
+        "core": "multi",
+        "servers": [
+		 "127.0.0.1:7554",
+		 "127.0.0.1:7555",
+		 "127.0.0.1:7556",
+           ],
+        "local-cpus": 0
+    },
+
+
+    "target": {
+        "type": "npy",
+        "file": "target.npy",
+        "width": 256,
+        "height": 256,
+        "normals-file": "target-normals.npy",
+        "mesh": "meshes/target.ply",
+        "thresholding": 2,
+        "reweighting": false
+    },
+
+    "original": {
+        "lights": "lights/original-lights.lt"
+    },
+	
+    "initial-reconstruction": {
+        "type": "file",
+        "file": "target.npy",
+        "lights": "lights/light-directions.lt",
+        "light-intensities": "lights/light-intensities.lt"
+    },
+
+    "hyper-order": ["bsdf", "normals", "mesh"]
+}

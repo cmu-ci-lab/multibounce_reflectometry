@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.6.0">
+
+	<integrator type="field">
+		<string name="field" value="shNormal"/>
+		<float name="undefined" value="0.5"/>
+	</integrator>
+
+	<sensor type="orthographic">
+		<transform name="toWorld">
+			<scale x="1" y="1"/>
+			<lookAt origin="0, 0, 40" target="0, 0, 0" up="0, 1, 0"/>
+		</transform>
+
+		<sampler type="ldsampler">
+			<integer name="sampleCount" value="$sampleCount"/> 
+		</sampler>
+
+		<film type="ldrfilm">
+			<integer name="width" value="$width"/>
+			<integer name="height" value="$height"/>
+			<boolean name="banner" value="false"/>
+			<string name="pixelFormat" value="rgb"/>
+			<string name="fileFormat" value="png"/>
+			<string name="componentFormat" value="float32"/>
+			<rfilter type="tent">
+				<float name="radius" value="0.01"/>
+			</rfilter>
+		</film>
+	</sensor>
+
+	<bsdf type="diffuse" id="white-rough">
+		<spectrum name="reflectance" value="1"/>
+	</bsdf>
+
+	<emitter type="directional">
+		<vector name="direction" x="0" y="0" z="-1"/>
+		<spectrum name="irradiance" value="1"/>
+	</emitter>
+
+	<shape type="ply">
+		<string name="filename" value="$mesh"/>
+		<transform name="toWorld">
+			<scale value="1"/>
+			<translate x="0" y="0" z="0"/>
+		</transform>
+		<ref id="white-rough"/>
+	</shape>
+
+</scene>
