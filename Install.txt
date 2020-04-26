@@ -1,0 +1,36 @@
+# mitsuba-diff
+
+Install Instruction (ubuntu):
+
+# Get basic packages
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install subversion git-core mercurial keychain openssh-client openssh-server g++ g++-multilib build-essential zip unzip p7zip-full python2.7 python-dev apt-file vim scons qt4-dev-tools libpng12-dev libjpeg8 libjpeg8-dev libpng3 libilmbase-dev libxerces-c-dev libglewmx1.6-dev libxxf86vm-dev libbz2-dev htop zlib1g-dev aptitude dkms gedit-plugins gedit-latex-plugin ntp gnome-terminal gimp gimp-ufraw ufraw ufraw-batch dcraw valgrind linux-tools-common smartmontools libapache2-mod-perl2 gnome-disk-utility libapache2-svn subversion-tools gnome-system-tools unrar xml-twig-tools linux-headers-$(uname -r) rsync inkscape irssi mutt s3cmd meshlab openexr libopenexr-dev openexr-viewers libgnome2-bin gparted ubuntu-restricted-extras uml-utilities gpick gnome-color-manager libfftw3-3 libfftw3-dev libboost1.58-all-dev pkg-config
+
+# Install Mitsuba-diff
+- Clone 'kfir' branch of https://github.com/saipraveenb25/mitsuba-diff:
+  git clone -b kfir https://github.com/saipraveenb25/mitsuba-diff
+- Install the following packages: tensorflow, numpy and PIL using python-pip:
+  pip install tensorflow numpy PIL
+cd mitsuba-diff
+cp "build/config-linux-gcc.py" "config.py"
+- Build mitsuba-diff by executing:
+  scons -j 8
+  
+- Build the tensorflow operators:
+  cd tf_ops
+  make
+
+### run the scene
+- Local: In order to operate in the same computer.
+  cd
+  cd mitsuba-diff
+  source setpath.sh
+ - change MITSUBA_DIFF_ENV in optimizers/multisrv.py has to be the mitsuba-diff location.
+ - change <number-of-servers> to number of servers (for example 8) and command:
+  python optimizers/multisrv.py -n <number-of-servers> -l
+
+- change <path-to-mitsuba-diff> to the your path (pwd at mitsuba-diff) and <path-to-test-folder> to the test folder and run:
+MTSTF_REDUCTOR_ENABLE=true python <path-to-mitsuba-diff>/optimizers/optimize.py <path-to-test-folder>/config.json
+
+

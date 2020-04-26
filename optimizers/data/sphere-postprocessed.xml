@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.6.0">
+	<integrator type="bdpt">
+		<integer name="maxDepth" value="$depth"/>
+        	<boolean name="lightImage" value="false"/>
+	</integrator>
+
+	<sensor type="orthographic">
+
+		<transform name="toWorld">
+			<scale x="1" y="1"/>
+			<lookAt origin="0, 0, 10" target="0, 0, 0" up="0, 1, 0"/>
+		</transform>
+		<sampler type="ldsampler">
+			<integer name="sampleCount" value="$sampleCount"/> 
+		</sampler>
+
+		<film type="hdrfilm">
+			<integer name="width" value="256"/>
+			<integer name="height" value="256"/>
+			<boolean name="banner" value="false"/>
+			<string name="pixelFormat" value="luminance"/>
+            		<string name="fileFormat" value="hds"/>
+            		<string name="componentFormat" value="float32"/>
+			<rfilter type="gaussian"/>
+		</film>
+	</sensor>
+
+	<bsdf type="diffwrapper" id="white-rough">
+<bsdf type="dj_merl">
+<string name="filename" value="/tmp/tabular-bsdf-$meshSlot.binary"/>
+</bsdf>
+<boolean name="differentiable" value="true"/>
+</bsdf>
+
+
+	<bsdf type="diffuse" id="light">
+		<spectrum name="reflectance" value="400:0.78, 500:0.78, 600:0.78, 700:0.78"/>
+	</bsdf>
+
+	<emitter type="envmap">
+		<string name="filename" value="envmaps/$envmap"/>
+	</emitter>
+
+	<shape type="sphere">
+		<transform name="toWorld">
+			<scale value="0.6"/>
+			<translate x="0" y="0" z="0"/>
+		</transform>
+		<ref id="white-rough"/>
+	</shape>
+
+</scene>

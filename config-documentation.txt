@@ -1,0 +1,356 @@
+{
+    # This is never used.. just leave it at major:1, minor:0
+    "version": {"major":1, "minor":0},
+
+    # No effect on the optimization. Merely a name that can be used as a tag because
+    # this file is copied into the dataset during the optimization
+    "name": "test-bowl",
+    "description": "Tests non lambertian surface reconstruction",
+
+    # NORMALS estimator
+    # Haven't provided much documentation for this because
+    # it's not being used currently
+    "estimator": {
+
+        # This describes the optimizer that will be used (Eg. Adam, SGD, Adagrad etc..)
+        # Use grouped-adam for normals.. other optimizers have bias problems
+        "optimizer": {
+            "type": "grouped-adam",
+            "params-generator": {
+                "type": "factor",
+                "factor": 0.93,
+                "initial-value": 0.0
+            },
+            "beta1": 0.001,
+            "beta2": 0.001,
+	    "decay": 20
+        },
+        "iterations": 0,
+	    "regularization": {
+		"enabled": true,
+		"type": "smoothness",
+		"lambda": 0.2,
+		"radius": 1.0
+	},
+        "samples": {
+            "type": "variable",
+            "stops": [20,40,80,120,180,300,400],
+            "samples": [4,8,32,64,64,128,128],
+	    "bsdf-adaptive": true,
+	    "bsdf-adaptive-mode": "bsdfWeight"
+        },
+        "depth": -1,
+        "albedo": false,
+        "hyper-parameters": "weights/initialization.npy",
+        "normalize-gradients": false,
+	"placeholder-gradients": true,
+	"enforce-integrability": true
+    },
+
+    # Base port to launch the mtstensorflow server that computes the gradient
+    # (receives commands from tensorflow)
+    "base-port": 7654,
+
+    # Do not modify these keys. They are used to define the parameter names. The files are
+    # auto-generated
+    "weight-samples-parameter-list": "sample-parameters.json",
+    "hyper-parameter-list": "parameters.json",
+
+    # Non-functional / Deprecated.
+    "weight-estimation": {
+        "enabled": true,
+        "samples": 2048,
+        "depth": -1,
+        "mesh": "meshes/photometric.ply",
+        "scene": "scenes/dictionary-scene.xml",
+        "dfile": "dictionary.npy"
+    },
+
+    # BSDF estimator details.
+    "bsdf-estimator": {
+
+        # The optimizer to use for gradient descent.
+        "optimizer": {
+
+            # Optimizer class (EG-Adam is exponentiated gradient (custom optimizer))
+            # Alternatives are defined in normals.py (at the top)
+            "type": "eg-adam",
+
+            # This defines a decaying learning rate.
+            # It starts are 'initial-value' and is multiplied 
+            # every SuperIteration by
+            # 'factor'
+            "params-generator": {
+                "type": "factor",
+                "factor": 0.98,
+                "initial-value": 0.07
+            },
+
+            # Beta1 and Beta2 values used in Adam (Refer to Adam paper)
+            "beta1": 0.5,
+            "beta2": 0.99,
+
+            # Do not modify. Defines the grouping to average adam parameters over.
+            # This avoids some pitfalls of constrained gradient descent.
+            "sets": "main-only"
+        },
+
+        # Number of BSDF iterations. Set to 0 to skip completely.
+        "iterations": 300,
+
+        # Sampling parameters
+        "samples": {
+            
+            # Do not modify.. this is the only one that works.
+            "type": "variable",
+
+            # The 'stops' iteration at which the sampleCount is replaced 
+            # with the corresponding entry in
+            # 'samples'
+            "stops": [10,20,30,40,60,100,200,300],
+
+            # The sample count corresponding to the iteration counts in 'stops'
+            # use only powers of 2.
+            "samples":[128,128,256,256,512,1024,2048,4196],
+
+            # Do not change.
+            # Does not affect tabular-bsdf
+	        "bsdf-adaptive": true,
+	        "bsdf-adaptive-mode": "bsdfWeight",
+
+            # Enable spatially adaptive sampling
+	        "spatial-adaptive": true,
+	        "spatial-adaptive-mode" : "direct"
+        },
+        
+        # Tabular BSDF optimization.
+	    "tabular-bsdf": {
+
+            # Optimizer to use for tabular.
+		    "optimizer": {
+
+                # Use only 'Adam' 
+                # Others could cause errors because normals.py attempts to
+                # extract 'm' and 'v' slots that only Adam contains.
+        	    "type": "adam",
+
+                    # Same as the other 'params-generator'
+            		"params-generator": {
+                		"type": "factor",
+                		"factor": 0.95,
+                		"initial-value": 2.5
+            		},
+            		"beta1": 0.25,
+            		"beta2": 0.99,
+
+                    # Not used.
+	    		    "decay": 60
+        	},
+
+            # Tabular BSDF initialization matrix path
+	        "initialization": "tabular-bsdf/initialization.npy"
+	    
+	    },
+
+        # Rendering depth for both loss L and its gradient
+        "depth": -1,
+
+        # Initialization for dictionary BSDF
+        "hyper-parameters": "weights/initialization.npy",
+
+        # Don't change and of these keys.
+        "pre-project": false,
+        "weight-reprojection": true,
+        "update-list": true,
+        "bsdf-first": true,
+
+        # This adds additional BSDF iterations to the very
+        # first SuperIteration only.
+        "extended-phase": 0
+    },
+
+    # Do not change this. The path is auto-generated
+    "zero-padding": "zero-padding.json",
+
+    # This part pre-processes the XML scene files 
+    # and replaces the placeholder string with a BSDF tag
+    # that is derived from the "file" attribute.
+    # In the dictionary file, set "type": "tabular" to 
+    # use tabular BDSFs. Otherwise it defaults to dictionary
+    "bsdf-preprocess": {
+        "enabled": true,
+        "file": "bsdf-dictionary.json"
+    },
+
+    # Defines the lights.
+    # Only for directional lights.
+    # For envmap, define the lights directly in the scene.
+    "lights": {
+        # Light directions file.
+        "file": "lights/light-directions-synthetic.lt",
+
+        # Light intensity file.
+        "intensity-file": "lights/light-intensities-synthetic.lt",
+
+        # Non-functional
+        "recalibrate": true
+    },
+
+    # Mesh Initialization (photometric)
+    "initialization": {
+        "file": "meshes/photometric.ply"
+    },
+
+    
+    "remesher": {
+        "enabled": true,
+        "iterations": 40,
+        "keep-normals": false,
+        "integrator": "poisson"
+    },
+
+    "scenes": {
+        "intensity": "scenes/intensity-scene.xml",
+        "gradient": "scenes/gradient-scene.xml",
+        "normals": "scenes/normals-scene.xml",
+        "colors": "scenes/colors-scene.xml"
+    },
+
+    # Do not change.
+    "output-link": {
+        "intensity": "/tmp/mtsout-0.hds",
+        "gradient": "/tmp/mtsgradout-0.shds"
+    },
+
+    # Logfile outputs. Also don't change.
+    "logging": {
+        "intensity": {
+            "stdout":"out-0.log",
+            "stderr":"err-0.log"
+        },
+        "gradient": {
+            "stdout":"out-1.log",
+            "stderr":"err-1.log"
+        }
+    },
+
+    #  Resolution scaling
+    "multiresolution": {
+        "enabled":true,
+
+        # Do not change.
+        "type":"static-list",
+
+        # "schedule" defines the iteration at which to change the scale. "values"
+        # defines the corresponding scale.
+        # Note that "values" are a downscaling parameter 
+        # (Eg. 2 implies the image is rendered at W/2,H/2)
+        "schedule": [250,300,400],
+        "values": [2,1,1]
+    },
+
+    # Distributed rendering information.
+    "distribution": {
+        "enabled": true,
+
+        # Use Auto if the automated AWS system
+        # is set up.
+        # Use 'multi' otherwise
+        "type": "auto",
+
+        # Leave blank if 'auto'.
+        # List servers otherwise
+        # Use localsrv.py or multisrv.py to launch servers
+        "servers": [
+	    ],
+
+        # How many local threads to launch (per-image)
+        # Recommended value is 0 (all processing is done by servers)
+        "local-cpus": 0
+    },
+
+    # Mask information
+    "mask": {
+        # Preferable use 'file'. There is an auto compute option, but it is not
+        # properly functional
+        "type": "file",
+
+        # Filepath to mask.npy
+        "file": "mask.npy",
+
+        # 'Erodes' the mask (erode function) when computing the error weights only
+        # This is to avoid regions outside the masked area influencing
+        # the error in the mask region
+        # Preferably use 3 or 5
+	    "weight-erode": 5
+    },
+
+    # target images rendering/loading information
+    "target": {
+        # Recommended "type"s: 
+        # External render (ext-render)
+        #   (Uses local threads to render the mitsuba scene using a standard mitsuba call)
+        # From file (npy)
+        #   (Load from numpy file (W,H,L))
+        "type": "ext-render",
+
+        # Dimensions for the target (unscaled)
+        "width": 256,
+        "height": 256,
+
+        # Needed only for comparison (used to compute ground truth normals error)
+        "normals-file": "target-normals.npy",
+
+        # The target mesh
+        "mesh": "meshes/target.ply",
+
+        # The scene used to render the target scene.
+	    "scene": "scenes/intensity-scene.xml.pp.xml",
+
+        # Do not modify.
+        "thresholding": 0,
+        "reweighting": false,
+
+        # Path length to render the target scene.
+	    "depth": -1,
+
+        # Sample count for the target scene.
+	    "samples": 8192,
+
+        # Target Dictionary BSDF weights.
+	    "hyper-parameters": "weights/target.npy",
+
+        # Target tabular BSDF matrix.
+	    "tabular-bsdf": "tabular-bsdf/target.npy"
+    },
+
+
+    # do not modify. Deprecated/Non-functional
+    "original": {
+        "lights": "lights/original-lights.lt"
+    },
+
+    # These parameters are used by initial-mesh.py
+    # which computes the photometric mesh initialization
+    # given target images.
+    "initial-reconstruction": {
+        "type": "file",
+        "file": "target.npy",
+        "lights": "lights/light-directions-synthetic.lt",
+        "light-intensities": "lights/light-intensities-synthetic.lt",
+	    "mask": "mask.npy"
+    },
+
+    # These parameters are only used to extract the BSDF using
+    # "bsdf_compare.py"
+    # No need to modify these.
+    "bsdf-compare": {
+        "source": "scenes/comparison/source-scene.xml",
+        "target": "scenes/comparison/source-scene.xml",
+        "target-embed": true,
+        "target-weights": "weights/target.npy"
+    },
+
+    # Non-functional/Deprecated
+    "hyper-order": ["bsdf", "normals", "mesh"]
+}
